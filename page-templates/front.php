@@ -30,22 +30,22 @@ get_header(); ?>
       <button>try demo</button>
       </li>
       <li class="orbit-slide">
-        <figure class="orbit-figure">
-          <img class="orbit-image" src="https://placehold.it/1200x600/888?text=Slide-2" alt="Space">
-          <figcaption class="orbit-caption">Lets Rocket!</figcaption>
-        </figure>
+ <h5>Reporting</h5>	
+      <h1>Comprehensive Safety Management</h1>
+      <p>Streamline safety tasks on-the-go with Safesite Field. Log safety hazards instantly and automatically notify responsible parties for resolution. Progress is tracked and logged the entire way.</p>
+      <button>try demo</button>
       </li>
       <li class="orbit-slide">
-        <figure class="orbit-figure">
-          <img class="orbit-image" src="https://placehold.it/1200x600/777?text=Slide-3" alt="Space">
-          <figcaption class="orbit-caption">Encapsulating</figcaption>
-        </figure>
+ <h5>Reporting</h5>	
+      <h1>Comprehensive Safety Management</h1>
+      <p>Streamline safety tasks on-the-go with Safesite Field. Log safety hazards instantly and automatically notify responsible parties for resolution. Progress is tracked and logged the entire way.</p>
+      <button>try demo</button>
       </li>
       <li class="orbit-slide">
-        <figure class="orbit-figure">
-          <img class="orbit-image" src="https://placehold.it/1200x600/666&text=Slide-4" alt="Space">
-          <figcaption class="orbit-caption">Outta This World</figcaption>
-        </figure>
+ <h5>Reporting</h5>	
+      <h1>Comprehensive Safety Management</h1>
+      <p>Streamline safety tasks on-the-go with Safesite Field. Log safety hazards instantly and automatically notify responsible parties for resolution. Progress is tracked and logged the entire way.</p>
+      <button>try demo</button>
       </li>
     </ul>
   </div>
