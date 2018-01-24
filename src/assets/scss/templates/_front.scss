@@ -1,86 +1,105 @@
 // Page header
 .front-hero {
-  .marketing {
-    @include xy-grid-container(55rem);
-    @include xy-grid;
-  }
-
+  margin-bottom: 90px;
   @include breakpoint(small) {
-    background: url('../images/demo/hero-bg-foundation-6-small.svg') bottom center;
     background-size: cover;
     background-position: bottom;
-    padding: rem-calc(65%) 0;
-    margin: 0 0 rem-calc(32);
+    margin: 0 0 90px;
     height: auto;
     position: relative;
     text-align: left;
   }
 
   @include breakpoint(medium) {
-    background: url('../images/demo/hero-bg-foundation-6-large.svg') bottom center;
     background-size: cover;
     background-position: center;
-    height: rem-calc(685);
-    margin: 0 0 rem-calc(72);
+    height: 800px;
   }
 
-  .watch {
+  .logos{
+    height: 90px;
+    background: #e6e7e8;
+    bottom: -90px;
+    margin-left: 9%;
+    position: absolute;
+    border-radius: 0px 0px 0px 30px;
+    -moz-border-radius: 0px 0px 0px 30px;
+    -webkit-border-radius: 0px 0px 0px 30px;
+    border: 0px solid #000000;
     @include breakpoint(small) {
-      @include xy-cell(7);
+    @include grid-column(6);
+    @include grid-column-collapse;
     }
 
     @include breakpoint(medium) {
-      @include xy-cell(12);
-    }
 
-    a {
-      color: #B4C9D1;
-      cursor: pointer;
-      font-weight: 400;
-      margin-right: rem-calc(20);
-    }
 
-    a:hover {
-      color: #fff;
-    }
+      h2 {
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
 
-    #stargazers {
-      :before {
-        content: "\f09b";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        color: #B4C9D1;
-        margin-right: rem-calc(8);
+      h4 {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: #777;
+        margin-bottom: 2rem;
       }
     }
-
-    #twitter {
-      :before {
-        content: "\f099";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        color: #B4C9D1;
-        margin-right: rem-calc(8);
-      }
-    }
-
   }
 
-  .tagline {
+  .orbit {
+    background: #1e5080;
+    bottom: -90px;
+    height: 523px;
+    position: absolute;
+    right: 0;
     @include breakpoint(small) {
-      @include xy-cell(8);
+    @include grid-column(5);
+    @include grid-column-collapse;
     }
-
     @include breakpoint(medium) {
-      @include xy-cell(5);
-      padding-top: 6rem;
+    @include grid-column(5);
+    @include grid-column-collapse;
+    }
+    .orbit-controls{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 15%;
+      height: 40px;
+
+    }
+    .orbit-container {
+      position: relative;
+      height: 0;
+      width: 85%;
+      float: right;
+      margin: 0;
+      list-style: none;
+      overflow: hidden;
+    }
+    .orbit-bullets {
+      width: 15%;
+      display: inline-block;
+      margin-top: 0.8rem;
+      float: left;
+      bottom: 0;
+      margin-bottom: 0.8rem;
+      text-align: center;
+      button {
+        width: 1rem;
+        height: 1rem;
+        margin: 9px 38%;
+        border-radius: 50%;
+        &.is-active{
+        width: 3rem;
+        height: 3rem;
+        }
+      }
     }
   }
-
+    
   h1 {
     color: #fff;
     font-weight: 500;
@@ -99,57 +118,10 @@
     font-weight: 300;
     font-size: 1.3125rem;
   }
-
-  .download {
-    margin-top: rem-calc(20);
-  }
-}
-
-// Intro
-.intro {
-  @include xy-grid-container;
-  @include xy-grid;
-
-  .fp-intro {
-    @include breakpoint(small) {
-      @include xy-cell(12);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(10);
-      @include xy-cell-offset(1);
-
-      h2 {
-        font-weight: 300;
-        margin-bottom: 1.5rem;
-      }
-
-      h4 {
-        font-size: 1.125rem;
-        line-height: 1.6;
-        color: #777;
-        margin-bottom: 2rem;
-      }
-    }
-  }
-}
-
-// Section divider
-.section-divider {
-  @include xy-grid-container;
-  @include xy-grid;
-
-  hr {
-    @include xy-cell(12);
-    @extend .dotted;
-    box-sizing: border-box;
-  }
 }
 
 // Benefits
 .benefits {
-  @include xy-grid-container;
-  @include xy-grid;
   text-align: center;
 
   header {
@@ -165,37 +137,25 @@
       color: #777;
     }
   }
-
-  .semantic,
-  .responsive,
-  .customizable,
-  .professional {
-    @include breakpoint(small) {
-      @include xy-cell(12);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(3);
-    }
-
-    img {
-      padding: 1.25rem;
-      margin: 1rem auto 0 auto;
-    }
-
-    h3 {
-      color: #0a0a0a;
-      font-weight: 300;
-      font-size: 1.75rem;
-    }
-
-    p {
-      font-size: 0.9375rem;
+}
+.submenu {
+  background: white !important;
+  top:109px !important;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  &:hover{
+    .is-dropdown-submenu-item {
+      display: block !important;
+      ul{
+        display: block !important;
+        top:280px !important;
+      }
     }
   }
-
-  .why-foundation {
-    @include xy-cell(12);
-    margin-top: 4rem;
+  .is-dropdown-submenu-item {
+    ul{
+      top:280px !important;
+    }
   }
 }
