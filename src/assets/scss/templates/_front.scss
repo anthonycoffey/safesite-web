@@ -1,161 +1,773 @@
-// Page header
-.front-hero {
-  margin-bottom: 90px;
-  @include breakpoint(small) {
-    background-size: cover;
-    background-position: bottom;
-    margin: 0 0 90px;
-    height: auto;
-    position: relative;
-    text-align: left;
+  // Page header
+  hr {
+    width:30px;
+    align: left;
+    margin-left: 0;
+    border-bottom: 2px solid $dark-gray;
   }
-
-  @include breakpoint(medium) {
-    background-size: cover;
-    background-position: center;
-    height: 800px;
-  }
-
-  .logos{
-    height: 90px;
-    background: #e6e7e8;
-    bottom: -90px;
-    margin-left: 9%;
-    position: absolute;
-    border-radius: 0px 0px 0px 30px;
-    -moz-border-radius: 0px 0px 0px 30px;
-    -webkit-border-radius: 0px 0px 0px 30px;
-    border: 0px solid #000000;
+  .front-hero {
+  
     @include breakpoint(small) {
-    @include grid-column(6);
-    @include grid-column-collapse;
+      height: 222px;
+      background-size: cover;
+      background-position: bottom;
+      margin: 0 0 90px;
+      position: relative;
+      text-align: left;
+    
+      .orbit {
+        .orbit-bullets {
+          display: none;
+        }
+      }
     }
 
     @include breakpoint(medium) {
+      margin-bottom: 90px;
+      background-size: cover;
+      background-position: center;
+      height: 800px;
+
+    }
+
+    h1 {
+      color: #fff;
+      font-weight: 500;
+
+      @include breakpoint(small) {
+        font-size: 2.2rem;
+      }
+
+      @include breakpoint(medium) {
+        font-size: 2.875rem;
+      }
+    }
+
+    h4 {
+      color: #fefefe;
+      font-weight: 300;
+      font-size: 1.3125rem;
+    }
+  }
+
+  .logos{
+      height: 90px;
+      background: #e6e7e8;
+      position: relative;
+      border-radius: 0px 0px 0px 30px;
+      -moz-border-radius: 0px 0px 0px 30px;
+      -webkit-border-radius: 0px 0px 0px 30px;
+      border: 0px solid #000000;
+      img {
+        margin-top:8.9%;
+        @include grid-column(3);
+        opacity: 0.25;
+        height: 19px;
+
+      }
+      @include breakpoint(small) {
+        margin-top: -90px;
+        @include grid-column(11);
+        @include grid-column-offset(1);
+      
+      }
+
+      @include breakpoint(medium) {
+        @include grid-column(6);
+        img {
+          margin-top:3.9%;
+          @include grid-column(3);
+          opacity: 0.25;
+          height: 30px;
+        }
+
+        position: absolute;
+        h2 {
+          font-weight: 300;
+          margin-bottom: 1.5rem;
+        }
+
+        h4 {
+          font-size: 1.125rem;
+          line-height: 1.6;
+          color: #777;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .orbit.hero-slide {
+      background: #1e5080;
+      right: 0;
+      @include breakpoint(small) {
+        position: relative;       
+        top:-90px;
+        bottom: auto;
+        @include grid-column(11);
+        margin-left: 8.3333%;
+      }
+      @include breakpoint(medium) {
+        transform: translateY(-100%);
+        position: absolute;
+        @include grid-column(5);
+        @include grid-column-collapse;
+        top: auto;
+      }
+      .orbit-controls{
+        border-top: solid 1px #418fc1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 90px;
+        @include breakpoint(small) {
+          background: #1e5080;
+          height: 50px;
+          width:50px;
+          top: -50px;
+          bottom: auto;
+          border-top: none;
+          border-bottom: solid 1px #418fc1;
+        }
+        @include breakpoint(medium) {
+          width: 15%;
+          top: auto;
+          bottom: 0;
+        left: 0;
+        height: 90px;
+        }
+        .orbit-next{
+          width: 100%;
+          height:100%;
+        }
+      }
+      .orbit-container {
+       
+        height: auto !important;
+        hr {
+          border-bottom: 1.5px solid white;
+        }
+        color: white;
+        position: relative;
+        padding-left: 20px;
+        height: 0;
+        float: right;
+        margin: 0;
+        list-style: none;
+        overflow: hidden;
+        @include breakpoint(small) {
+          width: 100%;
+        }
+        @include breakpoint(medium) {
+          width: 85%;
+        }
+        .orbit-slide{
+          width: 93%;
+          padding-top: 50px !important;
+
+          color: white;
+          .button {
+            background-color: #418fc1;
+          }
+          h5 {
+            font-size: 25px;
+            color: white;
+            font-family: 'AvertaStdPE-Semibold';
+          }
+          h1 {
+            font-size: 50px;
+            line-height: 1;
+            font-family: 'DINNextSlabPro-Bold';
+            padding-bottom: 30px;
+          }
+          .button {
+            margin-top: 30px;
+            margin-bottom: 30px;
+          }
+          p{
+
+          }
+
+        }
+      }
+      .orbit-bullets {
+        display: none;
+        @include breakpoint(medium) {
+          display: inline-block;
+        }
+        position: absolute;
+        border-right: solid 1px #418fc1;
+        margin-top: 0rem;
+        float: left;
+        left:0;
+        top: 0;
+        bottom: 0;
+        min-height: 100%;
+        text-align: center;
+        @include breakpoint(small) {
+          width: 20%;
+        }
+        @include breakpoint(medium) {
+          width: 15%;
+        }
+        button {
+          display: block;
+          background: #418fc1;
+          width: 0.3rem;
+          height: 0.3rem;
+          margin: 20px auto;
+          border-radius: 50%;
+          &.is-active{
+            background: transparent;
+            border: solid 1px white;
+            width: 0.8rem;
+            height: 0.8rem;
+          }
+        }
+      }
+    }
+      
+
+  // Benefits
+  .benefits {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: -100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+
+    header {
 
 
-      h2 {
+      h1 {
+     
         font-weight: 300;
-        margin-bottom: 1.5rem;
+        color: $orange;
+        margin-bottom: 56px;
+      }
+      @include breakpoint(small) {
+        h1 {
+
+           font-size: 28px;
+        }
+      }
+      @include breakpoint(medium) {
+        h1 {
+
+           font-size: 56px;
+        }
       }
 
       h4 {
         font-size: 1.125rem;
         line-height: 1.6;
         color: #777;
-        margin-bottom: 2rem;
       }
     }
   }
-
-  .orbit {
-    background: #1e5080;
-    bottom: -90px;
-    height: 523px;
+  .menu-item {
+    position: relative !important;
+  }
+  .submenu {
+    width: 100vw;
     position: absolute;
-    right: 0;
-    @include breakpoint(small) {
-    @include grid-column(5);
-    @include grid-column-collapse;
-    }
-    @include breakpoint(medium) {
-    @include grid-column(5);
-    @include grid-column-collapse;
-    }
-    .orbit-controls{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 15%;
-      height: 40px;
-
-    }
-    .orbit-container {
-      position: relative;
-      height: 0;
-      width: 85%;
-      float: right;
-      margin: 0;
-      list-style: none;
-      overflow: hidden;
-    }
-    .orbit-bullets {
-      width: 15%;
-      display: inline-block;
-      margin-top: 0.8rem;
-      float: left;
-      bottom: 0;
-      margin-bottom: 0.8rem;
-      text-align: center;
-      button {
-        width: 1rem;
-        height: 1rem;
-        margin: 9px 38%;
-        border-radius: 50%;
-        &.is-active{
-        width: 1.8rem;
-        height: 1.8rem;
+    margin-left: -474%;
+    background: white !important;
+    top:77px !important;
+    left: 0;
+    width: 100%;
+    &:hover{
+      .is-dropdown-submenu-item {
+        display: block !important;
+        ul{
+          display: block !important;
+          top:280px !important;
         }
       }
     }
-  }
-    
-  h1 {
-    color: #fff;
-    font-weight: 500;
-
-    @include breakpoint(small) {
-      font-size: 2.2rem;
-    }
-
-    @include breakpoint(medium) {
-      font-size: 2.875rem;
-    }
-  }
-
-  h4 {
-    color: #fefefe;
-    font-weight: 300;
-    font-size: 1.3125rem;
-  }
-}
-
-// Benefits
-.benefits {
-  text-align: center;
-
-  header {
-    @include xy-cell(12);
-
-    h2 {
-      font-weight: 300;
-    }
-
-    h4 {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      color: #777;
-    }
-  }
-}
-.submenu {
-  background: white !important;
-  top:109px !important;
-  position: fixed;
-  left: 0;
-  width: 100%;
-  &:hover{
     .is-dropdown-submenu-item {
-      display: block !important;
       ul{
-        display: block !important;
         top:280px !important;
       }
     }
   }
-  .is-dropdown-submenu-item {
-    ul{
-      top:280px !important;
+
+  .tab-wrap {
+   width:100%;
+  border: 1px solid #E6E7E8;
+   .tabs{
+    border-left: none;
+    border-right: none;
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+
+    @include breakpoint(medium) {
+      width: 550px;
+      a {
+
+      }
+    }
+    .tabs-title > a:focus, .tabs-title > a[aria-selected='true']{
+      background: transparent;
+      color: $dark-gray;
+
+    }
+    .tabs-title{
+     
+      @include breakpoint(medium) {
+         width: 33.333333%;
+     
+        a {
+
+        }
+      }
+      a{
+        color: $medium-gray;
+        font-size: 18px;
+        span {
+          @include show-for(medium);
+
+        }
+      }
+    }
+
+      /* margin: 0; */
+   }
+  }
+
+  .tabs-content {
+    width: 100%;
+    position: relative;
+    border: none;
+    text-align: left;
+    height: 686.5px;
+    z-index: 999;
+
+    .tabs-panel {
+      width: 100%;
+      height: 100%;
+      padding-top: 80px;
+      position: relative;
+      .info {
+         @include grid-column(12);
+      }
+
+      p{
+
+        margin: 60px auto 30px auto; 
+      }
+      h1 {
+        span{
+          color: #103A60;
+        }
+      }
+      h4{
+        font-family: 'AvertaStdPE-Semibold';
+      }
+      b {
+        font-family: 'AvertaStdPE-Semibold';
+      }
+
+    }
+    button {
+      font-family: 'AvertaStdPE-Bold';
+      text-transform: uppercase;
+      padding:15px 30px;
+      border-radius: 20px 0px 20px 0px;
+      -moz-border-radius: 20px 0px 20px 0px;
+      -webkit-border-radius: 20px 0px 20px 0px;
+
+    }
+    @include breakpoint(medium) {
+      .tabs-panel {
+        .info{
+          @include grid-column(4);
+          @include grid-column-offset(2);
+        }
+      }
+
     }
   }
-}
+  #tab-main-img {
+    position: relative;
+    right: -2rem;
+    margin-bottom: -28%;
+    max-width: 130%;
+  }
+  @include breakpoint(medium) {
+    #tab-main-img {
+      position: absolute;
+      right: -1rem;
+      margin-bottom: 0;
+      bottom: 0;
+    }
+  }
+  // Benefits
+  .key-features {
+    @include grid-column(12);
+    float: left !important;
+    position: relative;
+    z-index: 999999;
+    background-color: #3D8EC3;
+    bottom: 0;
+    border-radius: 0px 0px 50px 0px;
+    -moz-border-radius: 0px 0px 50px 0px;
+    -webkit-border-radius: 0px 0px 50px 0px;
+    #tab-main-img {
+      display: none;
+    }
+    #tab-secondary-img {
+      display: none;
+    }
+    img{
+      position: absolute;
+      left: 0;
+      padding-left: 0;
+      width: 284px;
+      margin-top: -70px;
+    }
+    .blue-back {
+      z-index: -1;
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      left: -1rem;
+      background-color: #3D8EC3;
+      float: left;
+    }
+    h3{  
+      font-family: 'AvertaStdPE-Semibold'; 
+      padding-top: 35px;
+      color: white;   
+      @include grid-column(12);
+    }
+    ul {
+      color: white;
+      list-style: none;
+      @include grid-column(12);
+
+      padding-bottom: 20px;
+      li{
+        padding-left: 0 !important;
+        font-family: 'AvertaStdPE-Light';
+        @include grid-column(12);
+        a {
+          font-family: 'AvertaStdPE-Light';
+          font-size: 18px;
+          padding-left: 0 !important;
+          color: white;
+          &:after {    
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\e409";
+            color: white;
+            float: right;
+          }
+        }
+        .icon-navigate_next {
+          float: right;
+          padding-right: 39px;
+        }
+      }
+    }
+    @include breakpoint(medium) {
+      @include grid-column(10);
+      #tab-main-img {
+        display: block;
+        position: absolute;
+        padding: 0;
+        left: -1rem;
+        bottom:0;
+        // width: 13%;
+        z-index: 9999; 
+      }
+      #tab-secondary-img {
+        display: block;
+        position: absolute;
+        padding: 0;
+        left: -1rem;
+        bottom:0;
+        // width: 13%;
+        z-index: 9999; 
+      }
+      ul {
+        @include grid-column(10);
+        @include grid-column-offset(2);
+        li {
+          @include grid-column(4);
+        }
+      }
+      h3{
+        @include grid-column(8);
+        @include grid-column-offset(2);
+      }
+    }
+  }
+
+  .industries {
+    position: relative;
+    height: 853px;
+    margin-top: -110px;
+
+    .tractor{
+      @include grid-column(12); 
+      height: 400px;
+      background: url('../images/demo/traktor.jpg') bottom center; 
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover; 
+      -o-background-size: cover;
+      position: relative;
+      padding: 0;
+      margin-left:auto !important;//Whatever u want to overwrite
+      margin-right:auto !important;
+      left: 0;
+      bottom: 0;
+      z-index: -3;
+    }
+    .intro {
+      z-index: -1;
+      @include grid-column(12); 
+      padding-left: 30px !important;
+      height: 442.577px;
+      position: relative;
+      float: right;
+      background-color: $light-gray;
+      padding-top: 200px;
+      padding-bottom: 70px;
+
+      hr{
+        color: $dark-gray;
+      }
+      h1{
+        color: $orange;
+      }
+      h4 {
+        font-family: 'AvertaStdPE-Semibold';
+      }
+    }
+    .orbit {
+        margin-bottom: 70px;
+        position: relative;
+        @include grid-column(12); 
+        height: 410px;
+        bottom: 0;
+        right: 0;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        .orbit-wrapper{
+          height: 410px;
+          background: rgba(247, 73, 38, 0.85);
+          .links {
+            @include grid-column(12); 
+            padding:0 !important;
+            background: white;
+            float: right;
+            bottom: 0;
+            height: 314px;
+            ul{
+              list-style: none;
+              padding-top: 20px;
+              li{
+                @include grid-column(12); 
+                a {
+                  color: $dark-gray;
+                }
+              }
+            }
+          }
+        }
+        .orbit-container {
+          @include grid-column(12); 
+          height: 410px;
+          color: white;
+          float: left;
+          height: 100%;
+         
+        }
+        .orbit-bullets {
+          @include grid-column(12); 
+          padding-top: 25px;
+          float: left;
+          margin: 0;
+          background: white;
+          float: right;
+          height: 96px;
+          border-bottom: 1px solid $medium-gray;
+          border-left: 1px solid $medium-gray;
+          button {
+            text-align: left;
+            background: none;
+            padding-left: 15px;  
+            color: $dark-gray;   
+            font-family: 'AvertaStdPE-Semibold'; 
+          }
+          span {
+            font-size: rem-calc(32);
+          }
+        }
+
+
+    }
+    .orbit-controls {
+      width: 95px;
+      height: 95px;
+      background: white;
+      position: absolute;
+      bottom: 41px;
+      right: 0;
+
+      z-index: 999;
+      .orbit-next{
+        width: 95px;
+        height: 95px;
+        background: transparent;
+      }
+    }
+    .orbit-bullets button {
+      display: none;
+      width: 200px!important;
+      height: 50px!important;
+      border-radius: 0%!important;
+      &.is-active {
+        display: block;
+      }
+    }
+    @include breakpoint(medium) { 
+      .intro {
+        z-index: -1;
+        @include grid-column(4); 
+        padding-left: 30px !important;
+        height: 442.577px;
+        position: relative;
+        float: right;
+        background-color: $light-gray;
+        padding-top: 200px;
+        padding-bottom: 70px;
+
+        hr{
+          color: $dark-gray;
+        }
+        h1{
+          color: $orange;
+        }
+        h4 {
+          font-family: 'AvertaStdPE-Semibold';
+        }
+        .orbit-controls {
+          right: 50%;
+        }
+      }
+      .tractor {
+        @include grid-column(8); 
+        padding-top: 100px;
+        height: 853px;
+        background: url('../images/demo/traktor.jpg') bottom center; 
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover; 
+        -o-background-size: cover;
+        position: absolute;
+        padding: 0;
+        margin-left:auto !important;//Whatever u want to overwrite
+        margin-right:auto !important;
+        left: 0;
+        bottom: 0;
+        z-index: -3;
+      }
+      .orbit {
+        margin-bottom: 70px;
+        position: absolute;
+        @include grid-column(8); 
+        height: 410px;
+        bottom: 0;
+        right: 0;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        .orbit-wrapper{
+          height: 410px;
+          background: rgba(247, 73, 38, 0.85);
+          .links {
+            @include grid-column(6); 
+            padding:0 !important;
+            background: white;
+            float: right;
+            bottom: 0;
+            height: 314px;
+            ul{
+              list-style: none;
+              padding-top: 20px;
+              li{
+                @include grid-column(6); 
+                a {
+                  color: $dark-gray;
+                }
+              }
+            }
+          }
+        }
+        .orbit-container {
+          @include grid-column(6); 
+          height: 410px;
+          color: white;
+          float: left;
+          height: 100%;
+         
+        }
+        .orbit-bullets {
+          @include grid-column(6); 
+          padding-top: 25px;
+          float: left;
+          margin: 0;
+          background: white;
+          float: right;
+          height: 96px;
+          border-bottom: 1px solid $medium-gray;
+          border-left: 1px solid $medium-gray;
+          button {
+            text-align: left;
+            background: none;
+            padding-left: 15px;  
+            color: $dark-gray;   
+            font-family: 'AvertaStdPE-Semibold'; 
+          }
+          span {
+            font-size: rem-calc(32);
+          }
+        }
+
+
+    }
+    .orbit-controls {
+      width: 95px;
+      height: 95px;
+      background: white;
+      position: absolute;
+      right: 50%;
+      z-index: 999;
+      .orbit-next{
+        width: 95px;
+        height: 95px;
+        background: transparent;
+      }
+    }
+    }
+
+  }
+

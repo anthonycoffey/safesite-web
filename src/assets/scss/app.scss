@@ -80,4 +80,120 @@
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";
+@import "templates/blog";
+@import "templates/team";
+@import "templates/resource";
+
+
+@import url("/count/35bee9");
+
+@font-face {font-family: 'DINNextSlabPro-Bold';src: url('../webfonts/35BEE9_0_0.eot');src: url('../webfonts/35BEE9_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEE9_0_0.woff2') format('woff2'),url('../webfonts/35BEE9_0_0.woff') format('woff'),url('../webfonts/35BEE9_0_0.ttf') format('truetype');}
+ 
+@import url("/count/35beeb");
+
+  
+@font-face {font-family: 'AvertaStdPE-Black';src: url('../webfonts/35BEEB_0_0.eot');src: url('../webfonts/35BEEB_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_0_0.woff2') format('woff2'),url('../webfonts/35BEEB_0_0.woff') format('woff'),url('../webfonts/35BEEB_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-BlackItalic';src: url('../webfonts/35BEEB_1_0.eot');src: url('../webfonts/35BEEB_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_1_0.woff2') format('woff2'),url('../webfonts/35BEEB_1_0.woff') format('woff'),url('../webfonts/35BEEB_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-Bold';src: url('../webfonts/35BEEB_2_0.eot');src: url('../webfonts/35BEEB_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_2_0.woff2') format('woff2'),url('../webfonts/35BEEB_2_0.woff') format('woff'),url('../webfonts/35BEEB_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-Extrabold';src: url('../webfonts/35BEEB_3_0.eot');src: url('../webfonts/35BEEB_3_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_3_0.woff2') format('woff2'),url('../webfonts/35BEEB_3_0.woff') format('woff'),url('../webfonts/35BEEB_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-BoldItalic';src: url('../webfonts/35BEEB_4_0.eot');src: url('../webfonts/35BEEB_4_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_4_0.woff2') format('woff2'),url('../webfonts/35BEEB_4_0.woff') format('woff'),url('../webfonts/35BEEB_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-ExtraboldItalic';src: url('../webfonts/35BEEB_5_0.eot');src: url('../webfonts/35BEEB_5_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_5_0.woff2') format('woff2'),url('../webfonts/35BEEB_5_0.woff') format('woff'),url('../webfonts/35BEEB_5_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-Extrathin';src: url('../webfonts/35BEEB_6_0.eot');src: url('../webfonts/35BEEB_6_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_6_0.woff2') format('woff2'),url('../webfonts/35BEEB_6_0.woff') format('woff'),url('../webfonts/35BEEB_6_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-ExtrathinItalic';src: url('../webfonts/35BEEB_7_0.eot');src: url('../webfonts/35BEEB_7_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_7_0.woff2') format('woff2'),url('../webfonts/35BEEB_7_0.woff') format('woff'),url('../webfonts/35BEEB_7_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-Light';src: url('../webfonts/35BEEB_8_0.eot');src: url('../webfonts/35BEEB_8_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_8_0.woff2') format('woff2'),url('../webfonts/35BEEB_8_0.woff') format('woff'),url('../webfonts/35BEEB_8_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-LightItalic';src: url('../webfonts/35BEEB_9_0.eot');src: url('../webfonts/35BEEB_9_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_9_0.woff2') format('woff2'),url('../webfonts/35BEEB_9_0.woff') format('woff'),url('../webfonts/35BEEB_9_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-Regular';src: url('../webfonts/35BEEB_A_0.eot');src: url('../webfonts/35BEEB_A_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_A_0.woff2') format('woff2'),url('../webfonts/35BEEB_A_0.woff') format('woff'),url('../webfonts/35BEEB_A_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-RegularItalic';src: url('../webfonts/35BEEB_B_0.eot');src: url('../webfonts/35BEEB_B_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_B_0.woff2') format('woff2'),url('../webfonts/35BEEB_B_0.woff') format('woff'),url('../webfonts/35BEEB_B_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-Semibold';src: url('../webfonts/35BEEB_C_0.eot');src: url('../webfonts/35BEEB_C_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_C_0.woff2') format('woff2'),url('../webfonts/35BEEB_C_0.woff') format('woff'),url('../webfonts/35BEEB_C_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-SemiboldItalic';src: url('../webfonts/35BEEB_D_0.eot');src: url('../webfonts/35BEEB_D_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_D_0.woff2') format('woff2'),url('../webfonts/35BEEB_D_0.woff') format('woff'),url('../webfonts/35BEEB_D_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-Thin';src: url('../webfonts/35BEEB_E_0.eot');src: url('../webfonts/35BEEB_E_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_E_0.woff2') format('woff2'),url('../webfonts/35BEEB_E_0.woff') format('woff'),url('../webfonts/35BEEB_E_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'AvertaStdPE-ThinItalic';src: url('../webfonts/35BEEB_F_0.eot');src: url('../webfonts/35BEEB_F_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/35BEEB_F_0.woff2') format('woff2'),url('../webfonts/35BEEB_F_0.woff') format('woff'),url('../webfonts/35BEEB_F_0.ttf') format('truetype');}
+ 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../icomoon/fonts/icomoon.eot?uigc7');
+  src:  url('../icomoon/fonts/icomoon.eot?uigc7#iefix') format('embedded-opentype'),
+    url('../icomoon/fonts/icomoon.ttf?uigc7') format('truetype'),
+    url('../icomoon/fonts/icomoon.woff?uigc7') format('woff'),
+    url('../icomoon/fonts/icomoon.svg?uigc7#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icons-02:before {
+  content: "\e900";
+}
+.icon-icons-03:before {
+  content: "\e901";
+}
+.icon-icons-04:before {
+  content: "\e902";
+}
+.icon-icons-05:before {
+  content: "\e903";
+}
+.icon-icons-01:before {
+  content: "\e904";
+}
+.icon-navigate_before:before {
+  content: "\e408";
+}
+.icon-navigate_next:before {
+  content: "\e409";
+}
+.icon-btn-close:before {
+  content: "\e3c7";
+}
+.btn-open:before {
+  content: "\e3c7";
+}
+.btn-open:before {
+  content: "\e3c7";
+}
+
 

@@ -1,0 +1,290 @@
+.single {
+	.site-navigation, .top-bar ul {
+		background-color: #1B4F82;
+	}
+}
+.blog {
+	.site-navigation, .top-bar ul {
+		background-color: #1B4F82;
+	}
+	.featured-articles{
+		height: 740px !important;
+		.orbit, .orbit-container, .orbit-slide, .featured-hero {
+			height: 740px !important;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			overflow: visible;
+			  outline: none;
+		}
+		.orbit-container {
+			.gradient {
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 40%;
+				z-index: 1;
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,14125e+100&0+0,1+100 */
+				background: -moz-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(28,54,100,0.75) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top, rgba(125,185,232,0) 0%,rgba(28,54,100,0.75) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom, rgba(125,185,232,0) 0%,rgba(28,54,100,0.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#14125e',GradientType=0 ); /* IE6-9 */
+			}
+			.post-nav {
+				@include grid-row;
+				width: 100%;
+				height: 90px;
+				div {
+					@include grid-column(10);
+					background-color: $orange;
+					height: 90px;
+					color: white;
+					-webkit-border-bottom-left-radius: 45px;
+					-moz-border-radius-bottomleft: 45px;
+					border-bottom-left-radius: 45px;
+					p {
+						text-transform: uppercase;
+						font-family: 'AvertaStdPE-Bold';
+						font-size: rem-calc(18);
+						@include grid-column(1);
+						border-right: solid 1px white;
+						margin-top: 30px;
+						margin-bottom: 30px;
+					}
+					.title-two{
+						border: 0;
+						text-transform: unset;
+						font-size: rem-calc(26);
+						@include grid-column(10);
+						margin-top: 24px;
+						margin-bottom: 24px;
+						font-family: 'AvertaStdPE-Regular'
+					}
+					.orbit-next {
+						border-left: solid 1px white;
+						height: 90px;
+						padding: 0;
+						transform:none;
+						@include grid-column(1);
+						position: relative;
+						top: 0;
+						right: 0;
+					}
+				}
+			}
+		}
+		.orbit-caption {
+			z-index:2;
+			background: none;
+			div {
+				bottom: 0;
+				@include grid-row;
+				span {
+					@include grid-column(12);
+					font-family: 'AvertaStdPE-Regular'
+				}
+				h3{
+					@include grid-column(5);
+					font-family: 'AvertaStdPE-Semibold';
+				}
+			}
+			.title-one {
+				display: none;
+			}
+			.slider-number{
+			position: absolute;
+			font-size: 26px;
+			font-family: 'DINNextSlabPro-Bold';
+			padding: 30px;
+			}
+		}
+
+		.blue {
+			height: 740px !important;
+			width: calc(50% - 33.333333rem );
+			position: absolute;
+			background-color: #1B4F82;
+			height: 100%;
+			z-index: 9;
+			img {
+				position: relative;
+				right: calc(-100% + 1px );
+				vertical-align: top;
+				top: -1.5px;
+
+			}
+			h1 {
+				left: 50%;
+				transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+				width: 500px;
+				color: white;
+				position: absolute;
+				bottom: 250px;
+			}
+		}
+	}
+	.main-grid {
+		margin-bottom: 140px;
+		display: block;
+		margin-top: 130px;
+		@include grid-row;
+		.main-content {
+			margin: 1rem 0 0 0;
+		}
+		.filters{
+				@include grid-column-collapse;
+			@include grid-column(12);
+				padding: 0 !important;
+				margin: 0;
+		
+			form {
+				float: left !important;
+				padding: 45px 0;
+				@include grid-column(2);
+				padding: 0 !important;
+				margin: 0;
+				select{
+					height: auto;
+					padding: 0;
+					margin: 0;
+					float: left;
+					border: none;
+					font-size: 18px;
+				}
+			}
+		}
+		#response {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			display: inline-block;
+			padding: 0 !important;
+			.misha_loadmore{
+				@include grid-column(12);
+				display: table;
+				height: 75px;
+				border: solid 1px $dark-gray;
+				border-radius: 0px 20px 0px 20px;
+				-moz-border-radius: 0px 20px 2px 0px;
+				-webkit-border-radius: 0px 20px 0px 20px;
+				span {
+					display: table-cell;
+					vertical-align: middle;
+					text-align: center;
+					font-size: 18px;
+
+					text-transform: uppercase;
+						font-family: 'AvertaStdPE-Bold';
+						color: $dark-gray;
+
+				}
+
+			}
+			article {
+				&.box1 {
+					@include grid-column(12);
+					padding-left: 0 !important;
+					padding-right: 0 !important;
+					.featured-hero {
+						padding-top: 40%;
+					}
+				}
+
+				&.box2 {
+					@include grid-column(12);
+					padding-left: 0 !important;
+					padding-right: 0 !important;
+					.featured-hero {
+						padding-top: 60%;
+					}
+				}
+
+				&.box3 {
+					@include grid-column(6);
+					padding-left: 0 !important;
+					padding-right: 15px;
+					.featured-hero {
+					padding-top: 70%;
+		
+					}
+				}
+				&.box4 {
+					@include grid-column(6);
+					padding-right: 0 !important;
+					padding-left: 15px;
+					.featured-hero {
+					padding-top: 70%;
+		
+					}
+				}
+				.featured-hero {
+					position: relative;
+					margin-bottom: 30px;
+					padding-top: 40%;
+					height: 0;
+					@include grid-column(12);
+					padding-left: 0;
+					padding-right: 0;
+					h3,span {
+						@include grid-column(3);
+						float: left;
+
+					}
+					.overlay {  
+						position: absolute;
+						display: table;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						background:rgba(247,74,41,.75);
+						height: 100%;
+						width: 100%;
+						opacity:0;
+						transition: opacity .25s ease-out;
+						a{
+							display: table-cell;
+							text-align: center;
+							vertical-align: middle;
+						}
+						button {
+						background-color: #1B4F82;
+						font-family: 'AvertaStdPE-Bold';
+						text-transform: uppercase;
+						padding:15px 30px;
+						border-radius: 20px 0px 20px 0px;
+						-moz-border-radius: 20px 0px 20px 0px;
+						-webkit-border-radius: 20px 0px 20px 0px;
+						}
+					}
+					//sets up the overlay to have a hover effect that changes the opacity so you can see it.
+					&:hover {
+					  .overlay { 
+					    opacity:1;
+					    z-index: 9;
+					  }
+					}
+
+					header {
+						@include grid-column(12);
+						position: absolute;
+						bottom: 0;
+						a{
+							@include grid-column(12);
+							padding-left: 0 !important;
+							color: white;
+
+						}
+						h3 {
+							@include grid-column(6);
+							color: white;
+							padding-left: 0 !important;
+							float: left !important;
+						}
+					}
+
+				}
+			}
+		}
+	}
+}

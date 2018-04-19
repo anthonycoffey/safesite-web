@@ -1,21 +1,128 @@
 .footer-container {
-  margin: 0 auto;
-  border-top: 1px solid $medium-gray;
-  margin-top: rem-calc(60);
-}
+  padding-top: 0px;
+  background: $black;
+  position: relative;
+  @include grid-column-collapse;
+  @include grid-column(12);
+  margin: 0px auto;
+  z-index: 9999;
+  .pre-footer {
+    background: #1B4F82;
+    width: 100%;
+    @include grid-row;
+    
+    display: block;
+    margin: -70px auto 50px;
+    border-radius: 50px 0px 50px 0px;
+    -moz-border-radius: 50px 0px 50px 0px;
+    -webkit-border-radius: 50px 0px 50px 0px;
+    .info {
+      padding: 41px;
+      color: white;
+      font-size: 19px;
+      border: 0px solid #000000;
+      height: 138px;
+      @include grid-column(10);
+      @include grid-column-offset(1);
+      @include breakpoint(medium) {
+        @include grid-column(6);
+      }
 
-.footer {
-  @include xy-grid-container;
-  @include xy-grid;
-  padding: rem-calc(30) 0;
+    }
+    button{
+      padding:25px;
+      border-radius: 25px 0px 25px 0px;
+      -moz-border-radius: 25px 0px 25px 0px;
+      -webkit-border-radius: 25px 0px 25px 0px;
+      float: left !important;
+      @include grid-column(10);
+      @include grid-column-offset(1);
+      text-transform: uppercase;
+      margin: 36px;
+      @include breakpoint(medium) {
+        @include grid-column(3);
+      }
+    }
+  }
+
+}
+.post-footer {
+  float: left;
+  background: $black;
+  width: 100%;
+  min-height: 100px;
+  border-top: solid 1px white;
+}
+.footer-nav {
+  @include grid-row;
+  width: 100%;
+  padding-bottom: 20px;
+  @include breakpoint(medium) {
+    padding-bottom: 40px;
+  }
 
   section {
-    @include xy-cell(auto);
   }
 
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+  .icon-logo {
+     @include grid-column(1);
+      @include show-for(medium);
+  }
+  .contact {
+    @include breakpoint(medium) {
+      @include grid-column(3);
+    }
+    @include grid-column(12);
+    p{
+      color: $light-gray;
+    }
+  }
+  .footer-menu {
+
+    #nav_menu-2{
+      width: 100%;
+    }
+    width: 100%;
+    display: block;
+    float: left;  
+    padding: 0;
+    @include breakpoint(medium) {
+      @include grid-column(8);
+    }
+    ul{
+      padding: 0;
+      li{
+        @include breakpoint(medium) {
+          @include grid-column(4);
+        }
+        @include grid-column(6);
+        .sub-menu {
+            @include show-for(medium);
+          li {
+            padding: 0;
+            width: 100%;
+            a {
+              padding-top: 5px;
+              padding-bottom:  5px;
+              font-size: rem-calc(14);
+              color: white;
+              font-family: 'AvertaStdPE-Light';
+            }
+          }
+        }
+        a{
+          font-family: 'AvertaStdPE-Semibold';
+          font-size: rem-calc(18);
+          color: $light-gray;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,27 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3522281, 2018-02-07T00:14:29-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: DINNextSlabPro-Bold by Linotype
+ * URL: https://www.myfonts.com/fonts/linotype/din-next-slab/bold/
+ * Copyright: Copyright &#x00A9; 2014 Monotype Imaging Inc.  All rights reserved.
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3522281
+ * 
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("/count/35bee9");
+
+  
+@font-face {font-family: 'DINNextSlabPro-Bold';src: url('webfonts/35BEE9_0_0.eot');src: url('webfonts/35BEE9_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/35BEE9_0_0.woff2') format('woff2'),url('webfonts/35BEE9_0_0.woff') format('woff'),url('webfonts/35BEE9_0_0.ttf') format('truetype');}
+ 

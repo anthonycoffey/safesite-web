@@ -18,3 +18,4 @@ if ( ! class_exists( 'Foundationpress_Top_Bar_Walker' ) ) :
 		}
 	}
 endif;
+

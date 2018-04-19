@@ -1,0 +1,60 @@
+.page-template-page-team {
+	.orange {
+		width: 100%;
+		height: 450px;
+		background-color: $orange;
+		position: absolute;
+		z-index: -1;
+	}
+	.main-container {
+		margin-bottom: 140px;
+		.title {
+			@include grid-column(4);
+			@include grid-column-end;
+			color: white;
+			float: left;
+		}
+		.team{
+			width: 100%;
+			float: left;
+			@include grid-column-collapse;
+			.four {
+				@include grid-column-collapse;
+				@include grid-column(4);
+
+				.team-thumb {
+					width: 50%;
+					float: left;
+					@include grid-column-collapse;
+				}
+			}
+			.six {
+				width: 100%;
+				float: left;
+				.team-thumb {
+					width: 16.66667%;
+				    float: left;
+					@include grid-column-collapse;
+				}
+
+			}
+			.team-slide {
+				position: absolute;
+				float: right;
+				@include grid-column(8);
+				float: right;
+				.team {
+					@include grid-column(8);
+					display: none;
+					&.active {
+						display: block;
+					}
+
+				}
+			}			
+			.team-thumb {
+				@include grid-column(2);
+			}
+		}
+	}
+}

@@ -27,6 +27,10 @@ PATHS:
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
     - "src/assets/js/app.js"
+    - "src/assets/js/nav-custom.js"
+    - "src/assets/js/loadmore.js"
+    
+
   # Paths for the package task to include/exclude in .zip archive
   package:
     - "**/*"

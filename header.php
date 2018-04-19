@@ -18,20 +18,11 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
-		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
-	<?php endif; ?>
+	
 
 
 	<header class="site-header" role="banner">
-		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle(); ?>>
-			<div class="title-bar-left">
-				<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
-				<span class="site-mobile-title title-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/safesite.svg" alt="Safesite"></a>
-				</span>
-			</div>
-		</div>
+
 
 		<nav class="site-navigation top-bar" role="navigation">
 			<div class="top-bar-left">
@@ -40,9 +31,7 @@
 			
 				<?php foundationpress_top_bar_r(); ?>
 
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
+		
 			</div>
 			<div class="top-bar-right">
 
@@ -50,3 +39,25 @@
 		</nav>
 
 	</header>
+</nav>
+<div class="menu-overlay">
+	    <?php
+    wp_nav_menu( array( 
+        'theme_location' => 'mobile_menu' ) ); 
+    ?>
+		<div class="demo">
+
+		</div>
+	</div>
+</div>
+<div class="mobile-nav">
+	<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/safesite.svg" alt="Safesite"></a>
+<div class="burger">
+
+	<a class="btn-open icon-btn-close" href="#"></a>
+</div>
+</div>
+	<div class="sub-menu">
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Sub Menu") ) : ?>
+	<?php endif;?>
+	</div>
