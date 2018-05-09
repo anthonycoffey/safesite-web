@@ -84,7 +84,7 @@ if ( function_exists('register_sidebar') )
 );
 
 function wpb_custom_new_menu() {
-  register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+  register_nav_menu('my-custom-menu',__( 'Sub-menu' ));
 }
 add_action( 'init', 'wpb_custom_new_menu' );
 
@@ -348,6 +348,17 @@ function my_ajax_pagination() {
 	        'post_type' => 'resources',
 	        'posts_per_page' => -1
 	    );
+	        $posts = new WP_Query( $args );
+
+    if( ! $posts->have_posts() ) { 
+      
+    }
+    else {
+        while ( $posts->have_posts() ) { 
+            $posts->the_post();
+            get_template_part( 'template-parts/content-resource', '' );
+        }
+    }
 	}else {
 		$args = array(
 	        'post_type' => 'resources',
@@ -360,8 +371,7 @@ function my_ajax_pagination() {
 	            )
 	        )
 	    );
-	}
-    $posts = new WP_Query( $args );
+	        $posts = new WP_Query( $args );
 
     if( ! $posts->have_posts() ) { 
       
@@ -369,9 +379,11 @@ function my_ajax_pagination() {
     else {
         while ( $posts->have_posts() ) { 
             $posts->the_post();
-            get_template_part( 'template-parts/content', '' );
+            get_template_part( 'template-parts/content-result', '' );
         }
     }
+	}
+
 
     die();
 }

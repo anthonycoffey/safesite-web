@@ -1,0 +1,163 @@
+.page-template-page-contact {
+
+	.hero {
+		height: 670px;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		.info {
+			@include breakpoint(small only) {
+				@include grid-column(12);
+			}
+					@include breakpoint(medium) {
+				@include grid-column(11);
+				 @include grid-column-offset(1);
+					}   	
+			.title {
+				padding-top: 100px;
+				padding-bottom: 100px;
+			
+				h2 {
+					width: 40%
+				}
+			}
+			.contact {
+				padding-top: 30px;
+				z-index: 9;
+				position: relative;
+				background: #3D8EC3;
+				min-height: 500px;
+				float: left !important;
+				@include grid-column(12);
+				border-radius: 0px 0px 50px 0px;
+				-moz-border-radius: 0px 0px 50px 0px;
+				-webkit-border-radius: 0px 0px 50px 0px;
+				@include breakpoint(medium) {
+					position: absolute;
+			        @include grid-column(3);
+					padding-left: 0 !important;
+					padding-right: 0 !important;
+			    }
+				h2 {
+					padding-left: 30px;
+					font-family: 'AvertaStdPE-Semibold';
+					font-size: rem-calc(34);
+					color: white;
+					&.connect {
+						display: inline-block;
+						padding:  30px;
+
+					}
+				}
+				p {	
+					padding-left: 30px;
+					width: 50%;
+					font-family: 'AvertaStdPE-Light';
+					color: white;
+					&.bold{
+						margin-bottom: 5px;
+						font-family: 'AvertaStdPE-Semibold';
+					}
+				}
+				hr {
+					border-bottom: solid #1B4F82 1px;
+					height: 1px;
+					color: #1B4F82;
+					width: 100%;
+				}
+
+				a span{
+					padding:8px;
+					display: inline-block;
+					height: 36px;
+					width: 36px;
+					border-radius:18px;
+					background: #1B4F82;
+					margin: 5px;
+					&:before {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	.wpcf7 {
+
+		padding: 60px;
+		display: inline-block;
+		float: right;
+		height: 700px;
+		width: 100%;
+
+		@include breakpoint(medium) {
+	       @include grid-column(7);
+	    }
+		form{
+			width:83.4%;
+		}
+		h4 {
+			font-family: 'AvertaStdPE-Semibold';
+			color: #1B4F82;
+			font-size: 32px;
+		}
+		label {
+			font-family: 'AvertaStdPE-Bold';
+			font-size: 15px;
+			color: #636466;
+		}
+		textarea {
+			max-height: 100px;
+			width: 100%;
+			resize: none;
+			border: 1px solid #636466;
+		}
+		input[type="text"],
+		input[type="email"],
+		select.form-control {
+		  background: transparent;
+		  border: none;
+		  border-bottom: 1px solid #636466;
+		  -webkit-box-shadow: none;
+		  box-shadow: none;
+		  border-radius: 0;
+		}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		select.form-control:focus {
+		  -webkit-box-shadow: none;
+		  box-shadow: none;
+		}
+		.wpcf7-submit {
+			background-color: #1B4F82;
+			color: white;
+			font-family: 'AvertaStdPE-Bold';
+			font-size: 15px;
+			padding: 15px 30px;
+			border-radius: 10px 0px 10px 0px;
+			-moz-border-radius: 10px 0px 10px 0px;
+			-webkit-border-radius: 10px 0px 10px 0px;
+			float: left !important;
+			float: left;
+			text-transform: uppercase;
+		}
+
+	}
+	.acf-map {
+		z-index: 1;
+		display: inline-block;
+		left: 0;
+		height: 700px;
+		border: #ccc solid 1px;
+		width: 100%;
+		margin-top: -176px;
+		@include breakpoint(medium) {
+	        @include grid-column(5);
+	        margin-top: 0px;
+	    }
+	}
+
+	/* fixes potential theme css conflict */
+	.acf-map img {
+	   max-width: inherit !important;
+	}
+}

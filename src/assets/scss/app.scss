@@ -83,7 +83,7 @@
 @import "templates/blog";
 @import "templates/team";
 @import "templates/resource";
-
+@import "templates/contact";
 
 @import url("/count/35bee9");
 
@@ -150,7 +150,7 @@
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"], .type .icon {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -164,7 +164,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
 .icon-icons-02:before {
   content: "\e900";
 }
@@ -180,6 +191,15 @@
 .icon-icons-01:before {
   content: "\e904";
 }
+.icon-social-twitter:before {
+  content: "\e905";
+}
+.icon-social-facebook:before {
+  content: "\e906";
+}
+.icon-social-linkedin:before {
+  content: "\e907";
+}
 .icon-navigate_before:before {
   content: "\e408";
 }
@@ -188,6 +208,12 @@
 }
 .icon-btn-close:before {
   content: "\e3c7";
+}
+.icon-touch_app:before {
+  content: "\e913";
+}
+.icon-unfold_more:before {
+  content: "\e5d7";
 }
 .btn-open:before {
   content: "\e3c7";

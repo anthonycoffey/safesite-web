@@ -4,22 +4,25 @@ import whatInput from 'what-input';
 window.$ = $;
 
 import Foundation from 'foundation-sites';
+
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
 //import './lib/foundation-explicit-pieces';
 
 $(document).foundation();
 
-$(".features, #nav_menu-3").hover(function () {
+
+
+$(".features.menu-item, #nav_menu-3").hover(function () {
     $('#nav_menu-3').toggleClass("active");
 });
 
-$(".company, #nav_menu-4").hover(function () {
-    $('#nav_menu-4').toggleClass("active");
+$(".company.menu-item, #nav_menu-2").hover(function () {
+    $('#nav_menu-2').toggleClass("active");
 });
 
-$(".resources, #nav_menu-5").hover(function () {
-    $('#nav_menu-5').toggleClass("active");
+$(".resources.menu-item, #nav_menu-4").hover(function () {
+    $('#nav_menu-4').toggleClass("active");
 });
 
 $('#menu-mobile .menu-item-has-children').click(function(event) {
@@ -124,7 +127,19 @@ jQuery(function($){
 
 });
 
+var Packery=require('packery');
+var elem = document.querySelector('.main-content');
+var pckry = new Packery( elem, {
+  // options
+		transitionDuration: 0,
+		gutter: '.gutter-sizer',
+		percentPosition: true,
+		itemSelector: '.grid-item'
+});
+
+
 jQuery(function($){
+
 	Foundation.addToJquery($);
 	$('#category-menu li').click(function(){
 		var termname = $(this).data('slug');
@@ -139,11 +154,15 @@ jQuery(function($){
                 termname: termname
             },
             success: function( html ) {
-                console.log(html);
-                $('#category-post-content').html(html); 
-                $(document).foundation(); 
+             
+                $(document).foundation();  	var Packery=require('packery');
+         var $container = $('#category-post-content').packery();
+  var $html = $( html );
+  $container.append( $html );
+  $container.packery( 'appended', $html );
+        	
                 //here will do stuf
-            }
+            }, 
 	    });
 		return false;
 	});

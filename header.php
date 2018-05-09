@@ -15,6 +15,8 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<?php wp_head(); ?>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2l_UydRv8G30MPHGgoGhwImBy_cr7mNg"></script>
+
 	</head>
 	<body <?php body_class(); ?>>
 

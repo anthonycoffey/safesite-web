@@ -98,6 +98,7 @@ wp_reset_postdata(); ?>
 
 
 	<main id="response" class="main-content">
+		
 	<?php if ( have_posts() ) : ?>
 		<?php /* Start the Loop */ ?>
 		<?php $divId = 0;?>

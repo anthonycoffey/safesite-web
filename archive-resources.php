@@ -32,6 +32,8 @@ $categories = get_categories(); ?>
 <div id="loading-animation" style="display: none;"><img src="<?php echo admin_url ( 'images/loading-publish.gif' ); ?>"/></div>
 
 	<main id="category-post-content" class="main-content">
+		<div class="grid-sizer"></div>
+		<div class="gutter-sizer"></div>
 		<?php
 
         // The Arguments
@@ -67,13 +69,13 @@ $categories = get_categories(); ?>
 
 
 		<div></div>
-	<?php
+<!-- 	<?php
 global $wp_query; // you can remove this line if everything works for you
  
 // don't display the button if there are not enough posts
 if (  $wp_query->max_num_pages > 1 )
 	echo '<div class="misha_loadmore"><span>Load more articles</span></div>'; // you can use <a> as well
-?>
+?> -->
 	</main>
 
 

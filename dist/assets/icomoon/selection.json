@@ -4,6 +4,126 @@
     {
       "icon": {
         "paths": [
+          "M325.8 457.4v111.8h184.8c-7.4 48-55.8 140.6-184.8 140.6-111.2 0-202-92.2-202-205.8s90.8-205.8 202-205.8c63.4 0 105.6 27 129.8 50.2l88.4-85.2c-56.8-53-130.4-85.2-218.2-85.2-180.2 0.2-325.8 145.8-325.8 326s145.6 325.8 325.8 325.8c188 0 312.8-132.2 312.8-318.4 0-21.4-2.4-37.8-5.2-54h-307.6z",
+          "M1024 448h-96v-96h-96v96h-96v96h96v96h96v-96h96z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "google-plus",
+          "brand",
+          "social"
+        ],
+        "defaultCode": 60043,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "google-plus, brand5",
+        "name": "google-plus",
+        "id": 395,
+        "order": 26,
+        "prevSize": 32,
+        "code": 60043
+      },
+      "setIdx": 0,
+      "setId": 8,
+      "iconIdx": 395
+    },
+    {
+      "icon": {
+        "paths": [
+          "M608 192h160v-192h-160c-123.514 0-224 100.486-224 224v96h-128v192h128v512h192v-512h160l32-192h-192v-96c0-17.346 14.654-32 32-32z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "facebook",
+          "brand",
+          "social"
+        ],
+        "defaultCode": 60048,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "facebook, brand10",
+        "name": "facebook",
+        "id": 400,
+        "order": 17,
+        "prevSize": 32,
+        "code": 60048
+      },
+      "setIdx": 0,
+      "setId": 8,
+      "iconIdx": 400
+    },
+    {
+      "icon": {
+        "paths": [
+          "M1024 226.4c-37.6 16.8-78.2 28-120.6 33 43.4-26 76.6-67.2 92.4-116.2-40.6 24-85.6 41.6-133.4 51-38.4-40.8-93-66.2-153.4-66.2-116 0-210 94-210 210 0 16.4 1.8 32.4 5.4 47.8-174.6-8.8-329.4-92.4-433-219.6-18 31-28.4 67.2-28.4 105.6 0 72.8 37 137.2 93.4 174.8-34.4-1-66.8-10.6-95.2-26.2 0 0.8 0 1.8 0 2.6 0 101.8 72.4 186.8 168.6 206-17.6 4.8-36.2 7.4-55.4 7.4-13.6 0-26.6-1.4-39.6-3.8 26.8 83.4 104.4 144.2 196.2 146-72 56.4-162.4 90-261 90-17 0-33.6-1-50.2-3 93.2 59.8 203.6 94.4 322.2 94.4 386.4 0 597.8-320.2 597.8-597.8 0-9.2-0.2-18.2-0.6-27.2 41-29.4 76.6-66.4 104.8-108.6z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "twitter",
+          "brand",
+          "tweet",
+          "social"
+        ],
+        "defaultCode": 60054,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "twitter, brand16",
+        "name": "twitter",
+        "id": 406,
+        "order": 27,
+        "prevSize": 32,
+        "code": 60054
+      },
+      "setIdx": 0,
+      "setId": 8,
+      "iconIdx": 406
+    },
+    {
+      "icon": {
+        "paths": [
+          "M384 384h177.106v90.782h2.532c24.64-44.194 84.958-90.782 174.842-90.782 186.946 0 221.52 116.376 221.52 267.734v308.266h-184.61v-273.278c0-65.184-1.334-149.026-96.028-149.026-96.148 0-110.82 70.986-110.82 144.292v278.012h-184.542v-576z",
+          "M64 384h192v576h-192v-576z",
+          "M256 224c0 53.019-42.981 96-96 96s-96-42.981-96-96c0-53.019 42.981-96 96-96s96 42.981 96 96z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "linkedin",
+          "brand",
+          "social"
+        ],
+        "defaultCode": 60106,
+        "grid": 16
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "linkedin2, brand65",
+        "name": "linkedin2",
+        "id": 458,
+        "order": 28,
+        "prevSize": 32,
+        "code": 60106
+      },
+      "setIdx": 0,
+      "setId": 8,
+      "iconIdx": 458
+    },
+    {
+      "icon": {
+        "paths": [
           "M700.632 332.351v-191.626h-143.719c-2.994-35.93-32.936-65.871-68.865-65.871h-14.971v-5.988c0-38.924-29.942-68.865-68.865-68.865h-107.789c-35.93 0-68.865 29.942-68.865 68.865v5.988h-14.971c-35.93 0-65.871 29.942-68.865 65.871h-143.719v883.275h700.632v-197.614c128.749-8.982 230.55-116.772 230.55-245.52 0-131.743-101.801-239.532-230.55-248.515zM182.643 143.719c0-17.965 14.971-32.936 32.936-32.936h53.895v-41.918c0-17.965 14.971-29.942 29.942-29.942h104.795c17.965 0 29.942 14.971 29.942 29.942v44.912h53.895c17.965 0 32.936 14.971 32.936 32.936v53.895h-338.339v-56.889zM38.924 985.076v-808.421h104.795v59.883h413.193v-59.883h104.795v155.696c-89.825 8.982-164.678 62.877-200.608 140.725h-284.444v14.971h275.462c-11.977 29.942-17.965 59.883-17.965 92.819s5.988 62.877 17.965 92.819h-275.462v14.971h281.45c35.93 77.848 113.778 131.743 200.608 140.725v158.69h-619.789zM682.667 790.456c-116.772 0-209.591-92.819-209.591-209.591s92.819-209.591 209.591-209.591c116.772 0 209.591 92.819 209.591 209.591s-92.819 209.591-209.591 209.591z",
           "M658.713 610.807l-56.889-56.889-26.947 26.947 83.836 83.836 140.725-143.719-26.947-26.947z"
         ],
@@ -25,7 +145,7 @@
         "prevSize": 32,
         "code": 59648
       },
-      "setIdx": 0,
+      "setIdx": 2,
       "setId": 6,
       "iconIdx": 0
     },
@@ -52,7 +172,7 @@
         "prevSize": 32,
         "code": 59649
       },
-      "setIdx": 0,
+      "setIdx": 2,
       "setId": 6,
       "iconIdx": 1
     },
@@ -76,13 +196,13 @@
       },
       "attrs": [],
       "properties": {
-        "order": 9,
+        "order": 13,
         "id": 2,
         "name": "icons-04",
         "prevSize": 32,
         "code": 59650
       },
-      "setIdx": 0,
+      "setIdx": 2,
       "setId": 6,
       "iconIdx": 2
     },
@@ -112,7 +232,7 @@
         "prevSize": 32,
         "code": 59651
       },
-      "setIdx": 0,
+      "setIdx": 2,
       "setId": 6,
       "iconIdx": 3
     },
@@ -146,7 +266,7 @@
         "prevSize": 32,
         "code": 59652
       },
-      "setIdx": 0,
+      "setIdx": 2,
       "setId": 6,
       "iconIdx": 4
     },
@@ -171,7 +291,7 @@
         "code": 59653,
         "name": "social-twitter"
       },
-      "setIdx": 1,
+      "setIdx": 3,
       "setId": 5,
       "iconIdx": 96
     },
@@ -196,7 +316,7 @@
         "code": 59654,
         "name": "social-facebook"
       },
-      "setIdx": 1,
+      "setIdx": 3,
       "setId": 5,
       "iconIdx": 97
     },
@@ -222,7 +342,7 @@
         "code": 59655,
         "name": "social-linkedin"
       },
-      "setIdx": 1,
+      "setIdx": 3,
       "setId": 5,
       "iconIdx": 108
     },
@@ -249,7 +369,7 @@
         "code": 58376,
         "name": "navigate_before"
       },
-      "setIdx": 2,
+      "setIdx": 4,
       "setId": 4,
       "iconIdx": 152
     },
@@ -276,9 +396,90 @@
         "code": 58377,
         "name": "navigate_next"
       },
-      "setIdx": 2,
+      "setIdx": 4,
       "setId": 4,
       "iconIdx": 153
+    },
+    {
+      "icon": {
+        "paths": [
+          "M86 234h852v86h-852v-86zM86 448h852v86h-852v-86zM86 662h852v84h-852v-84z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "dehaze"
+        ],
+        "defaultCode": 58311,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "dehaze",
+        "id": 201,
+        "order": 12,
+        "prevSize": 32,
+        "code": 58311,
+        "name": "btn-close"
+      },
+      "setIdx": 4,
+      "setId": 4,
+      "iconIdx": 201
+    },
+    {
+      "icon": {
+        "paths": [
+          "M804 678c22 10 38 32 38 58v8l-32 226c-4 32-30 54-62 54h-290c-18 0-32-6-44-18l-212-212 34-34c8-8 20-14 34-14 4 0 6 2 10 2l146 30v-458c0-36 28-64 64-64s64 28 64 64v256h34c8 0 14 2 22 4zM384 480c-52-34-86-94-86-160 0-106 86-192 192-192s192 86 192 192c0 66-32 126-84 160v-160c0-58-50-106-108-106s-106 48-106 106v160z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "touch_app"
+        ],
+        "defaultCode": 59667,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "touch_app",
+        "id": 769,
+        "order": 14,
+        "prevSize": 32,
+        "code": 59667,
+        "name": "touch_app"
+      },
+      "setIdx": 4,
+      "setId": 4,
+      "iconIdx": 769
+    },
+    {
+      "icon": {
+        "paths": [
+          "M512 776l136-136 60 60-196 196-196-196 60-60zM512 248l-136 136-60-60 196-196 196 196-60 60z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "unfold_more"
+        ],
+        "defaultCode": 58839,
+        "grid": 24
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "unfold_more",
+        "id": 786,
+        "order": 15,
+        "prevSize": 32,
+        "code": 58839,
+        "name": "unfold_more"
+      },
+      "setIdx": 4,
+      "setId": 4,
+      "iconIdx": 786
     }
   ],
   "height": 1024,
@@ -311,7 +512,8 @@
       "classSelector": ".icon"
     },
     "historySize": 50,
-    "showCodes": true,
-    "gridSize": 16
+    "showCodes": false,
+    "gridSize": 16,
+    "showLiga": false
   }
 }

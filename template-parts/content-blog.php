@@ -12,7 +12,7 @@ global $divId;
 
 <article id="post-<?php the_ID(); ?>" class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . " "; } ?> group box<?php echo ++$divId; ?>" >
 	<div class="featured-hero" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'small' ); ?>, small], [<?php the_post_thumbnail_url( 'medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'large' ); ?>, large], [<?php the_post_thumbnail_url( 'xlarge' ); ?>, xlarge]">
-		<span class="gradient"></span>
+
 		<div class="overlay"> <a href="<?php the_permalink(); ?>"><button class="button">Read Post</button></a></div>
 		<header>
 		<?php
