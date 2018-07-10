@@ -163,8 +163,11 @@
         .orbit-slide{
           width: 93%;
           padding-top: 50px !important;
-
+          display: none;
           color: white;
+          &.is-active {
+            display: block;
+          }
           .button {
             background-color: #418fc1;
           }

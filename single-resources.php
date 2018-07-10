@@ -6,18 +6,23 @@
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+get_header(); 
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
+global $post; 
+if (    ( $post->post_type == 'resources' ) 
+     && has_term( 'checklist', 'resource-type' )
+) {
+	echo'<div class="overview checklist">';
+    get_template_part( 'template-parts/overview', 'checklist' );
+    echo'</div>';
+}elseif (    ( $post->post_type == 'resources' ) 
+     && has_term( 'video', 'resource-type' )
+) {
+	echo'<div class="overview" checklist>"';
+    echo 'viideo';
+}
+?>
 
-<div class="main-container">
-	<div class="main-grid">
-		<main class="main-content">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', 'case' ); ?>
-				<?php the_post_navigation(); ?>
-			<?php endwhile; ?>
-		</main>
-	</div>
+
 </div>
 <?php get_footer();

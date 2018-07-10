@@ -3,7 +3,7 @@
 Template Name: Resource
 */
 get_header(); ?>
-dsdsdsdsdsdsds
+
 <div id="archive-filters">
 <?php foreach( $GLOBALS['my_query_filters'] as $key => $name ): 
 	
@@ -27,4 +27,3 @@ dsdsdsdsdsdsds
 	
 <?php endforeach; ?>
 </div>
-sfdssafsfdssd

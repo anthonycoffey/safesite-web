@@ -14,10 +14,24 @@
 			color: white;
 			float: left;
 		}
+		.hero {
+		    position: absolute;
+		    right: 0;
+		    width: 58%;
+
+			.div {
+				@include grid-column(8);
+				display: none;
+				&.active {
+					display: block;
+				}
+			}
+		}
 		.team{
 			width: 100%;
 			float: left;
-			@include grid-column-collapse;
+			@include grid-column-collapse
+
 			.four {
 				@include grid-column-collapse;
 				@include grid-column(4);
@@ -43,14 +57,7 @@
 				float: right;
 				@include grid-column(8);
 				float: right;
-				.team {
-					@include grid-column(8);
-					display: none;
-					&.active {
-						display: block;
-					}
 
-				}
 			}			
 			.team-thumb {
 				@include grid-column(2);

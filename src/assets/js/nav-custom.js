@@ -10,3 +10,4 @@ $('.overlay').on('click', function(){
     $(".burger a").toggleClass('btn-open').toggleClass('btn-close');
     open = false;
 });
+

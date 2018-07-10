@@ -68,6 +68,8 @@
 	position: relative;
 	.type-resources {
 		padding: 0 !important;
+		display: inline-block;	
+		float: left;
 		.featured-hero {
 			height: 0;
 		}
@@ -78,63 +80,102 @@
 				padding-bottom: 30%;
 			}
 		}
+		margin-top: 10px;
 		&.box1 {
+			 &:before {
+			 	content: "";
+				padding-bottom: 30%;
+				display: inline-block;
+			}
 			@include grid-column(12);
+	
+			.featured-hero {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&.test {
+			position: relative;
+			&:before {
+			 	content: "";
+				padding-bottom: 133.7%;
+				display: inline-block;
+			}
+			margin-right: 10px;
+			width: calc( ( 100% - 10px * 2 ) / 3 );
+			.box3,.box2 {
+				position: absolute;
+				float: left;
+				width: 100%;
+				margin-right: 10px;
+				.featured-hero {
+					padding-bottom: calc(66.85% - 2.5px);
+
+				}
+			}
+			.box2 {
+				margin-top: 0;
+				top: 0;
+			}
+			.box3 {
+				bottom: 0;
+			}
+
+		}
+
 		
-			.featured-hero {
-padding-bottom: 30%;
-			}
-		}
 
-		&.box2 {
-			 width: calc( ( 100% - 10px * 2 ) / 3 );
-		
-			.featured-hero {
-padding-bottom: 60%;
-			}
-		}
-
-		&.box3 {
-			 width: calc( ( 100% - 10px * 2 ) / 3 );
-			.featured-hero {
-padding-bottom: 133.7%;
-
-			}
-		}
 		&.box4 {
-			 width: calc( ( 100% - 10px * 2 ) / 3 );
+			&:before {
+			 	content: "";
+				padding-bottom: 133.7%;
+				display: inline-block;
+			}
+			margin-right: 10px;
+			width: calc( ( 100% - 10px * 2 ) / 3 );
 			.featured-hero {
-padding-bottom: 133.7%;
-
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
 			}
 		}
 		&.box5 {
-			 width: calc( ( 100% - 10px * 2 ) / 3 );
+			&:before {
+			 	content: "";
+				padding-bottom: 133.7%;
+				display: inline-block;
+			}
+			width: calc( ( 100% - 10px * 2 ) / 3 );
 			.featured-hero {
-padding-bottom: 60%;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 100%;
 			}
 		}
 		&.box6 {
-			 width: calc( 33.2% - 5px);
-			
+			width: calc( 33.2% - 5px);
+			margin-right: 10px;
 			.featured-hero {
-padding-bottom: 80%;
-
+				padding-bottom: 80%;
 			}
 		}
 		&.box7 {
-		 width: calc( ( 66.8% - 5px);
+		width: calc( ( 66.8% - 5px);
 			.featured-hero {
-padding-bottom: 40%;
-
+				padding-bottom: 40%;
 			}
 		}
 		.featured-hero{
 			position: relative;
 			header {
+				position: relative;
 				@include grid-column(12);
-				position: absolute;
-				bottom: 0;
+				height: calc( 100% - 60px);
 				a{
 					@include grid-column(12);
 					padding-left: 0 !important;
@@ -142,10 +183,12 @@ padding-bottom: 40%;
 
 				}
 				h3 {
-					@include grid-column(6);
+					@include grid-column(12);
 					color: white;
 					padding-left: 0 !important;
 					float: left !important;
+					position: absolute;
+					bottom: -60px;
 				}
 			}
 		}

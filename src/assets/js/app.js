@@ -35,7 +35,11 @@ function copyDiv(){
   var secondDivContent = document.querySelector('.title-two');
   secondDivContent.innerHTML = firstDivContent.innerHTML;
 }
-
+copyDiv();
+$('.orbit').on('slidechange.zf.orbit', function() {
+    copyDiv();
+    slideNumber();
+});
 $(document).ready(function(){
 
     $(".burger a").click(function(){
@@ -125,16 +129,6 @@ jQuery(function($){
 		return false;
 	});
 
-});
-
-var Packery=require('packery');
-var elem = document.querySelector('.main-content');
-var pckry = new Packery( elem, {
-  // options
-		transitionDuration: 0,
-		gutter: '.gutter-sizer',
-		percentPosition: true,
-		itemSelector: '.grid-item'
 });
 
 

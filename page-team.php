@@ -20,9 +20,9 @@ get_header(); ?>
 			</hr>
 			<h1 class="end">Meet The Brains Behind Safesite</h1>
 		</span>
-		<main class="team collapse">
 
-<!-- 			<div class="team-slide">
+		<main class="team">
+			<div class="hero">
 				<?php
 				    $loop = new WP_Query( array( 'posts_per_page' => '-1','post_type' => 'team', 'paged' => $paged ) );
 				    if ( $loop->have_posts() ) :
@@ -30,7 +30,7 @@ get_header(); ?>
 				        while ( $loop->have_posts() ) : $loop->the_post(); 
 
 				        	?>
-				            <div class="team <?php echo ($i==0)?'active':''; ?>">
+				            <div class=" <?php echo ($i==0)?'active':''; ?>">
 				                <?php if ( has_post_thumbnail() ) { ?>
 				                    <div class="image">
 				                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
@@ -48,7 +48,11 @@ get_header(); ?>
 				    endif;
 				    wp_reset_postdata();
 				?>
-			</div> -->
+			</div>
+
+			<div class="team-slide">
+		
+			</div>
 				<?php
 				    $loop = new WP_Query( array( 'posts_per_page' => '-1','post_type' => 'team', 'paged' => $paged ) );
 				    if ( $loop->have_posts() ) :

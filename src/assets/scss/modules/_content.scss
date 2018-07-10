@@ -3,6 +3,23 @@ body.stop {
 }
 .main-container {
   @include xy-grid-container;
+  padding-bottom: 120px;
+}
+
+body.page {
+  header.title {
+    height: 260px;
+    background: $medium-gray;
+    .entry-title {
+      padding-top: 102px;
+      @include xy-grid-container;
+      color: $orange;
+    }
+  }
+  .widget-title {
+    font-family: 'AvertaStdPE-Semibold';
+    color: $blue;
+  }
 }
 
 .main-grid {
