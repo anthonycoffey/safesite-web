@@ -1,8 +1,9 @@
 import $ from 'jquery';
 import whatInput from 'what-input';
-
+import 'lazysizes/plugins/respimg/ls.respimg';
+import bgset from 'lazysizes/plugins/bgset/ls.bgset.min'; // Used for backgrounds.
+import lazySizes from 'lazysizes';
 window.$ = $;
-
 import Foundation from 'foundation-sites';
 
 // If you want to pick and choose which modules to include, comment out the above and uncomment
@@ -30,16 +31,7 @@ $(this).children(".sub-menu").slideToggle();
         return false;
     });
 
-function copyDiv(){
-  var firstDivContent = document.querySelector('.is-active .title-one');
-  var secondDivContent = document.querySelector('.title-two');
-  secondDivContent.innerHTML = firstDivContent.innerHTML;
-}
-copyDiv();
-$('.orbit').on('slidechange.zf.orbit', function() {
-    copyDiv();
-    slideNumber();
-});
+
 $(document).ready(function(){
 
     $(".burger a").click(function(){
@@ -133,7 +125,9 @@ jQuery(function($){
 
 
 jQuery(function($){
-
+$(document).on('replace', 'img', function (e, new_path, original_path) {
+  console.log(e.currentTarget, new_path, original_path);
+});
 	Foundation.addToJquery($);
 	$('#category-menu li').click(function(){
 		var termname = $(this).data('slug');
@@ -149,11 +143,9 @@ jQuery(function($){
             },
             success: function( html ) {
              
-                $(document).foundation();  	var Packery=require('packery');
-         var $container = $('#category-post-content').packery();
-  var $html = $( html );
-  $container.append( $html );
-  $container.packery( 'appended', $html );
+$('#category-post-content').html(html); 
+
+	$(document).foundation(); 
         	
                 //here will do stuf
             }, 
@@ -162,6 +154,12 @@ jQuery(function($){
 	});
 });
 
+lazySizes.init();
 
-
-
+window.lazySizesConfig = window.lazySizesConfig || {};
+window.lazySizesConfig.customMedia = {
+    '--small': '(max-width: 480px)',
+    '--medium': '(max-width: 700px)',
+    '--large': '(max-width: 991px)',
+    '--xlarge': '(min-width: 992px)'
+};

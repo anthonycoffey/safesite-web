@@ -15,8 +15,10 @@ endif;
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "  "; } ?> group box<?php echo ++$divId; ?> grid-item " >
-	<div class="featured-hero" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'small' ); ?>, small], [<?php the_post_thumbnail_url( 'medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'large' ); ?>, large], [<?php the_post_thumbnail_url( 'xlarge' ); ?>, xlarge]">
+<article id="post-<?php the_ID(); ?>" class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "  "; } ?> group box-<?php echo ++$divId; ?> dsds grid-item " >
+	<div class="featured-hero lazyload" data-sizes="auto" 
+    role="banner" data-bgset="<?php the_post_thumbnail_url( 'small' ); ?> [--small] | <?php the_post_thumbnail_url( 'medium' ); ?> [--medium] |  <?php the_post_thumbnail_url( 'large' ); ?> [--large] |  <?php the_post_thumbnail_url( 'xlarge' ); ?> [--xlarge]">
+    	<span class="solid"></span>
 		<span class="gradient"></span>
 
 		<header>
@@ -24,7 +26,7 @@ endif;
 			if ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			} else {
-				the_category(', '); 
+				
 				the_title('<h3>','</h3>');
 			}
 		?>
@@ -48,7 +50,7 @@ endif;
 		</h4>
 		<a class="link" href="<?php the_permalink(); ?>"><span class="icon-navigate_next"></span></a>	
 	</div>
-		
+
 	</div>
 </article>
 <?php         if ($divId == 3) :

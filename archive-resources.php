@@ -22,7 +22,7 @@ $categories = get_categories(); ?>
 			if( $terms = get_terms( 'resource-type', 'orderby=name' ) ) : // to make it simple I use default categories
 
 				foreach ( $terms as $term ) :
-					echo '<li data-slug="' . $term->name . '">' . $term->name . '</li>'; // ID of the category as the value of an option
+					echo '<li  data-slug="' . $term->name . '">' . $term->name . '</li>'; // ID of the category as the value of an option
 				endforeach;
 
 			endif;
@@ -40,7 +40,7 @@ $categories = get_categories(); ?>
         $args = array(
             'post_type' => 'resources',
 			'numberposts' => 25,
-			'posts_per_page' => 7,
+			'posts_per_page' => 8,
 			'paged' => $paged
         );  
 
