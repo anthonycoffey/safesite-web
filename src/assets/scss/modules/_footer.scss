@@ -5,6 +5,7 @@
   @include grid-column-collapse;
   @include grid-column(12);
   margin: 0px auto;
+  margin-top: 150px;
   z-index: 9999;
   .pre-footer {
     background: #1B4F82;

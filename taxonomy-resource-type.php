@@ -15,19 +15,9 @@ get_header(); ?>
 
 $categories = get_categories(); ?>
 <div id="resource-menu">
-	<h1>Resources</h1>
-	<ul id="category-menu" action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" >
-		<li class="current" data-slug="all">All</li>
-		<?php
-			if( $terms = get_terms( 'resource-type', 'orderby=name' ) ) : // to make it simple I use default categories
-
-				foreach ( $terms as $term ) :
-					echo '<li  data-slug="' . $term->name . '">' . $term->name . '</li>'; // ID of the category as the value of an option
-				endforeach;
-
-			endif;
-		?>
-	</ul>
+<h1 class="entry-title"><?php
+    printf( __( 'Resource Archive: %s', 'twentyten' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+?></h1>
 </div>
 <div id="loading-animation" style="display: none;"><img src="<?php echo admin_url ( 'images/loading-publish.gif' ); ?>"/></div>
 
@@ -35,14 +25,43 @@ $categories = get_categories(); ?>
 		<div class="grid-sizer"></div>
 		<div class="gutter-sizer"></div>
 		<?php
+  
 
-        // The Arguments
-        $args = array(
-            'post_type' => 'resources',
-			'numberposts' => 25,
-			'posts_per_page' => 8,
-			'paged' => $paged
-        );  
+
+		if ( is_tax('resource-type','whitepaper' ) ) {
+			$args=array(
+	    		'post_type' => 'resources',
+			    'taxonomy'  => 'resource-type',
+			    'term'      => 'whitepaper',
+			    'orderby'   => 'date',
+			    'order'     => 'DESC'
+			);
+
+		}elseif	(is_tax('resource-type','video' ) ) {
+			$args=array(
+	    		'post_type' => 'resources',
+			    'taxonomy'  => 'resource-type',
+			    'term'      => 'video',
+			    'orderby'   => 'date',
+			    'order'     => 'DESC'
+			);
+		}elseif	( is_tax('resource-type','case-study' ) ) {
+			$args=array(
+	    		'post_type' => 'resources',
+			    'taxonomy'  => 'resource-type',
+			    'term'      => 'case-study',
+			    'orderby'   => 'date',
+			    'order'     => 'DESC'
+			);
+		}elseif	( is_tax('resource-type','checklist' ) ) {
+			$args=array(
+	    		'post_type' => 'resources',
+			    'taxonomy'  => 'resource-type',
+			    'term'      => 'checklist',
+			    'orderby'   => 'date',
+			    'order'     => 'DESC'
+			);
+		};
 
         // The Query
         $the_query = new WP_Query( $args ); ?>
@@ -56,7 +75,7 @@ $categories = get_categories(); ?>
 
         <!-- Start the loop the loop --> 
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-			<?php get_template_part( 'template-parts/content-resource', get_post_format() ); ?>
+			<?php get_template_part( 'template-parts/content-result', get_post_format() ); ?>
 		<?php endwhile; ?>
 
 		<?php else : ?>

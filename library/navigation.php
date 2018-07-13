@@ -296,13 +296,13 @@ function misha_loadmore_ajax_handler(){
 	// prepare our arguments for the query
 	$args = json_decode( stripslashes( $_POST['query'] ), true );
 	$args['paged'] = $_POST['page'] + 1; // we need next page to be loaded
-	$args['posts_per_page'] = '4';
+	$args['posts_per_page'] = '7';
 	$args['post_status'] = 'publish';
 
  
 	// it is always better to use WP_Query but not here
 	query_posts( $args );
- 
+
 	if( have_posts() ) :
  
 		// run the loop
@@ -311,7 +311,12 @@ function misha_loadmore_ajax_handler(){
 			// look into your theme code how the posts are inserted, but you can use your own HTML of course
 			$divId = 0;
 			// do you remember? - my example is adapted for Twenty Seventeen theme
-			get_template_part( 'template-parts/content-blog', get_post_format() );
+			if ( is_post_type_archive('resources') ) {
+				get_template_part( 'template-parts/content-resource', get_post_format() );
+			}else {
+				get_template_part( 'template-parts/content-blog', get_post_format() );
+			}
+		
 			// for the test purposes comment the line above and uncomment the below one
 			// the_title();
  

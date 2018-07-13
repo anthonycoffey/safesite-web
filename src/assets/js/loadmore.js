@@ -17,6 +17,7 @@ jQuery(function($){
 				button.text('Loading...'); // change the button text, you can also add a preloader image
 			},
 			success : function( data ){
+
 				if( data ) { 
 					button.text( 'More posts' ).prev().before(data); // insert new posts
 					misha_loadmore_params.current_page++;
@@ -27,6 +28,7 @@ jQuery(function($){
 					// you can also fire the "post-load" event here if you use a plugin that requires it
 					// $( document.body ).trigger( 'post-load' );
 				} else {
+						$(document).foundation(); 
 					button.remove(); // if no data, remove the button as well
 				}
 			}

@@ -93,7 +93,7 @@ function resources() {
 		'description'           => __( 'Resources eg. Videos, Checklists, Case Studies', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( 'category', 'post_tag', 'resource-type' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -103,6 +103,7 @@ function resources() {
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
 		'has_archive'           => true,
+		'with_front'           	=> true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -138,9 +139,10 @@ function create_topics_hierarchical_taxonomy() {
  
 // Now register the taxonomy
  
-  register_taxonomy('resource-type',array('resources'), array(
+  register_taxonomy('resource-type','resources', array(
     'hierarchical' => true,
     'labels' => $labels,
+    'has_archive' => true,
     'show_ui' => true,
     'show_admin_column' => true,
     'query_var' => true,

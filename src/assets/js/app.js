@@ -33,7 +33,16 @@ $(this).children(".sub-menu").slideToggle();
 
 
 $(document).ready(function(){
-
+	$('.numbers').each(function () {
+	    $(this).prop('Counter',0).animate({
+	        Counter: $(this).text()
+	    }, {
+	        duration: 4000,
+	        step: function (now) {
+	            $(this).text(Math.ceil(now));
+	        }
+	    });
+	});
     $(".burger a").click(function(){
         $(".menu-overlay").fadeToggle(200);
         $('body').toggleClass("stop");
@@ -101,27 +110,27 @@ jQuery(function($){
 
 
 
-jQuery(function($){
-	Foundation.addToJquery($);
-	$('#filter-resource').submit(function(){
-		var filter = $('#filter-resource');
-		$.ajax({
-			url:filter.attr('action'),
-			data:filter.serialize(), // form data
-			type:filter.attr('method'), // POST
-			beforeSend:function(xhr){
-				filter.find('button').text('Processing...'); // changing the button label
-			},
-			success:function(data){
-				filter.find('button').text('Recent'); // changing the button label back
-				$('#response').html(data); // insert data
-				$(document).foundation(); 
-			}
-		});
-		return false;
-	});
+// jQuery(function($){
+// 	Foundation.addToJquery($);
+// 	$('#filter-resource').submit(function(){
+// 		var filter = $('#filter-resource');
+// 		$.ajax({
+// 			url:filter.attr('action'),
+// 			data:filter.serialize(), // form data
+// 			type:filter.attr('method'), // POST
+// 			beforeSend:function(xhr){
+// 				filter.find('button').text('Processing...'); // changing the button label
+// 			},
+// 			success:function(data){
+// 				filter.find('button').text('Recent'); // changing the button label back
+// 				$('#response').html(data); // insert data
+// 				$(document).foundation(); 
+// 			}
+// 		});
+// 		return false;
+// 	});
 
-});
+// });
 
 
 jQuery(function($){
@@ -142,11 +151,14 @@ $(document).on('replace', 'img', function (e, new_path, original_path) {
                 termname: termname
             },
             success: function( html ) {
-             
-$('#category-post-content').html(html); 
 
-	$(document).foundation(); 
-        	
+					$("#category-post-content").fadeOut(100, function() {
+					  $("#category-post-content").html(html); 
+					  $("#category-post-content").fadeIn(300);
+					  $(document).foundation(); 
+					});
+			
+			
                 //here will do stuf
             }, 
 	    });
@@ -163,3 +175,5 @@ window.lazySizesConfig.customMedia = {
     '--large': '(max-width: 991px)',
     '--xlarge': '(min-width: 992px)'
 };
+
+
