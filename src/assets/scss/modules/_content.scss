@@ -20,6 +20,20 @@ body.page {
     font-family: 'AvertaStdPE-Semibold';
     color: $blue;
   }
+  .siteorigin-panels-stretch  {
+    color: white;
+  }
+}
+
+.lazyloadng{
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+.lazyloaded{
+  opacity: 1;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
 }
 
 .main-grid {
