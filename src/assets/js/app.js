@@ -33,6 +33,7 @@ $(this).children(".sub-menu").slideToggle();
 
 
 $(document).ready(function(){
+
 	$('.numbers').each(function () {
 	    $(this).prop('Counter',0).animate({
 	        Counter: $(this).text()
@@ -157,7 +158,7 @@ $(document).on('replace', 'img', function (e, new_path, original_path) {
 					  $("#category-post-content").fadeIn(300);
 					  $(document).foundation(); 
 					});
-			
+					form.reset()
 			
                 //here will do stuf
             }, 

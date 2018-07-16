@@ -40,7 +40,7 @@ $categories = get_categories(); ?>
         $args = array(
             'post_type' => 'resources',
 			'numberposts' => 25,
-			'posts_per_page' => 8,
+			'posts_per_page' => 7,
 			'paged' => $paged
         );  
 
@@ -70,8 +70,7 @@ $categories = get_categories(); ?>
 
 		<div></div>
 	<?php
-	global $wp_query; // you can remove this line if everything works for you
-	 
+
 	// don't display the button if there are not enough posts
 	if (  $wp_query->max_num_pages > 1 )
 		echo '<div class="misha_loadmore"><span>Load more articles</span></div>'; // you can use <a> as well

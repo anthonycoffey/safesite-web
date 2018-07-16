@@ -338,7 +338,7 @@ function my_ajax_pagination() {
     $name = $_POST['termname']; 
     $args = array(
         'post_type' => 'resources',
-        'posts_per_page' => -1,
+        'posts_per_page' => 8,
         'tax_query' => array(
             array(
                 'taxonomy' => 'resource-type',
@@ -351,7 +351,7 @@ function my_ajax_pagination() {
 	if( $name == "all" ) {
 		$args = array(
 	        'post_type' => 'resources',
-	        'posts_per_page' => -1
+	        'posts_per_page' => 8
 	    );
 	        $posts = new WP_Query( $args );
 
@@ -367,7 +367,7 @@ function my_ajax_pagination() {
 	}else {
 		$args = array(
 	        'post_type' => 'resources',
-	        'posts_per_page' => -1,
+	        'posts_per_page' => -8,
 	        'tax_query' => array(
 	            array(
 	                'taxonomy' => 'resource-type',

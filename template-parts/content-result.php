@@ -9,12 +9,16 @@
  */
 global $divId;
 
-
+if ($divId == 1) :
+    echo  "<article class='type-resources test'>"; // close div if it's not the first
+endif;
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "  "; } ?> group result-1 grid-item " >
-	<div class="featured-hero" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'small' ); ?>, small], [<?php the_post_thumbnail_url( 'medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'large' ); ?>, large], [<?php the_post_thumbnail_url( 'xlarge' ); ?>, xlarge]">
+<article id="post-<?php the_ID(); ?>" class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "  "; } ?> group box-<?php echo ++$divId; ?>  grid-item " >
+	<div class="featured-hero lazyload" data-sizes="auto" 
+    role="banner" data-bgset="<?php the_post_thumbnail_url( 'small' ); ?> [--small] | <?php the_post_thumbnail_url( 'medium' ); ?> [--medium] |  <?php the_post_thumbnail_url( 'large' ); ?> [--large] |  <?php the_post_thumbnail_url( 'xlarge' ); ?> [--xlarge]">
+    	<span class="solid"></span>
 		<span class="gradient"></span>
 
 		<header>
@@ -49,4 +53,8 @@ global $divId;
 
 	</div>
 </article>
-
+<?php         
+	if ($divId == 3) :
+	echo "</article>";
+	endif;
+?>

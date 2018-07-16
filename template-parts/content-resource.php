@@ -10,12 +10,12 @@
 global $divId;
 
 if ($divId == 1) :
-    echo  "<div class='type-resources test'>"; // close div if it's not the first
+    echo  "<article class='type-resources test'>"; // close div if it's not the first
 endif;
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "  "; } ?> group box-<?php echo ++$divId; ?> dsds grid-item " >
+<article id="post-<?php the_ID(); ?>" class="<?php $allClasses = get_post_class(); foreach ($allClasses as $class) { echo $class . "  "; } ?> group box-<?php echo ++$divId; ?>  grid-item " >
 	<div class="featured-hero lazyload" data-sizes="auto" 
     role="banner" data-bgset="<?php the_post_thumbnail_url( 'small' ); ?> [--small] | <?php the_post_thumbnail_url( 'medium' ); ?> [--medium] |  <?php the_post_thumbnail_url( 'large' ); ?> [--large] |  <?php the_post_thumbnail_url( 'xlarge' ); ?> [--xlarge]">
     	<span class="solid"></span>
@@ -53,7 +53,8 @@ endif;
 
 	</div>
 </article>
-<?php         if ($divId == 3) :
-            echo "</div>";
-        endif;
-        ?>
+<?php         
+	if ($divId == 3) :
+	echo "</article>";
+	endif;
+?>
