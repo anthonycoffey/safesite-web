@@ -18,7 +18,7 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2l_UydRv8G30MPHGgoGhwImBy_cr7mNg"></script>
 
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> >
 
 	
 

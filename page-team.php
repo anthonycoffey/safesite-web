@@ -1,14 +1,5 @@
 <?php
-/**
- * The template for displaying all pages.
- *
- *
- Template Name: Team
- *
- * @package WordPress
- * @subpackage Boilerplate
- * @since Boilerplate 1.0
- */
+
 
 get_header(); ?>
 

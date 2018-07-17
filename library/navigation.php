@@ -107,26 +107,25 @@ function misha_filter_function(){
 	$args = array(
 		'orderby' => 'date', // we will sort posts by date
 		'order'	=> $_POST['date'] // ASC или DESC
-		
 	);
  
-	if( empty( $_POST['all'] ) ) {
-	    if( isset( $_POST['categoryfilter'] ) )
-	            $args['tax_query'] = array(
-	                array(
-	                    'hide_empty' => 0,
-	                    'taxonomy' => 'category',
-	                    'field' => 'id',
-	                    'terms' => $_POST['categoryfilter'],
-	                )
-	            );
-	}
+	// for taxonomies / categories
+	if( isset( $_POST['categoryfilter'] ) )
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'category',
+				'field' => 'id',
+				'terms' => $_POST['categoryfilter']
+			)
+		);
+ 
+
  
 	$query = new WP_Query( $args );
  
 	if( $query->have_posts() ) :
 		while( $query->have_posts() ): $query->the_post();
-			get_template_part( 'template-parts/content', 'blog' );
+			get_template_part( 'template-parts/content', '' );
 		endwhile;
 		wp_reset_postdata();
 	else :
@@ -162,7 +161,7 @@ function resource_filter_function(){
  
 	if( $query->have_posts() ) :
 		while( $query->have_posts() ): $query->the_post();
-			get_template_part( 'template-parts/content', 'blog' );
+			get_template_part( 'template-parts/content', '' );
 		endwhile;
 		wp_reset_postdata();
 	else :
@@ -190,7 +189,7 @@ function recent_filter_function(){
  
 	if( $query->have_posts() ) :
 		while( $query->have_posts() ): $query->the_post();
-			get_template_part( 'template-parts/content', 'blog' );
+			get_template_part( 'template-parts/content', '' );
 		endwhile;
 		wp_reset_postdata();
 	else :
@@ -352,7 +351,7 @@ function my_ajax_pagination() {
 	if( $name == "all" ) {
 		$args = array(
 	        'post_type' => 'resources',
-	        'posts_per_page' => 8
+	        'posts_per_page' => -1
 	    );
 	        $posts = new WP_Query( $args );
 
@@ -368,7 +367,7 @@ function my_ajax_pagination() {
 	}else {
 		$args = array(
 	        'post_type' => 'resources',
-	        'posts_per_page' => -8,
+	        'posts_per_page' => -1,
 	        'tax_query' => array(
 	            array(
 	                'taxonomy' => 'resource-type',

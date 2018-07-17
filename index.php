@@ -65,6 +65,7 @@ if( $next_post ) {
 
 <?php endforeach; 
 wp_reset_postdata(); ?>
+</ul>
 <div class="post-nav">
 	<div>
 		<p>Next</p>
@@ -72,15 +73,40 @@ wp_reset_postdata(); ?>
 		<button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span><span class="icon-navigate_next"></span></button>
 	</div>
 </div>
-			</ul>
+		
 
 	</div>
 </div>
+<?php
+// Query random posts
+$the_query = new WP_Query( array(
+	'post_type'      => 'post',
+	'orderby'        => 'rand',
+	'posts_per_page' => 3,
+) ); ?>
+
+<?php
+// If we have posts lets show them
+if ( $the_query->have_posts() ) : ?>
+
+	<div id="top-five">
+		<h3><?php _e( 'Top 5 Posts', 'text_domain' ); ?></h3>
+		<ul>
+			<?php
+			// Loop through the posts
+			while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
+				<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+		</ul>
+	</div>
+
+<?php endif; ?>
 <div class="main-grid">
 <div class="filters">
 	<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter" >
 		
-		<input id="clear" type="submit" name='all'  value="recent">
+		<input id="clear" type="submit" name='all'  value="Recent">
 		<?php
 			if( $terms = get_terms( 'category', 'orderby=name' ) ) : // to make it simple I use default categories
 				echo '<select id="sel" name="categoryfilter"><option>Category</option>';
@@ -120,7 +146,7 @@ global $wp_query; // you can remove this line if everything works for you
  
 // don't display the button if there are not enough posts
 if (  $wp_query->max_num_pages > 1 )
-	echo '<div id="misha_loadmore"><span>Load more articles</span></div>'; // you can use <a> as well
+	echo '<div class="misha_loadmore"><span>Load more articles</span></div>'; // you can use <a> as well
 ?>
 	
 
