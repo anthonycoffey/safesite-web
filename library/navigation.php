@@ -83,6 +83,8 @@ if ( function_exists('register_sidebar') )
   )
 );
 
+add_post_type_support( 'page', 'excerpt' );
+
 function wpb_custom_new_menu() {
   register_nav_menu('my-custom-menu',__( 'Sub-menu' ));
 }
@@ -102,6 +104,12 @@ function mobile_menu() {
   register_nav_menu('mobile_menu',__( 'Mobile' ));
 }
 add_action( 'init', 'mobile_menu' );
+
+function right_language() {
+  register_nav_menu('right_language',__( 'Language and log-in' ));
+}
+add_action( 'init', 'right_language' );
+
 
 function misha_filter_function(){
 	$args = array(

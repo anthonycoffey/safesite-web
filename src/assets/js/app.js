@@ -12,8 +12,6 @@ import Foundation from 'foundation-sites';
 
 $(document).foundation();
 
-
-
 $(".features.menu-item, #nav_menu-3").hover(function () {
     $('#nav_menu-3').toggleClass("active");
 });
@@ -25,6 +23,14 @@ $(".company.menu-item, #nav_menu-2").hover(function () {
 $(".resources.menu-item, #nav_menu-4").hover(function () {
     $('#nav_menu-4').toggleClass("active");
 });
+
+$(".links-title ul li:first").addClass("active");
+
+var toggleSlide = function(){
+	$(".links-title ul li.active").removeClass('active')
+	.next().add(".links-title ul li:first").last().addClass("active");
+}
+setInterval(toggleSlide, 5000);
 
 $('#menu-mobile .menu-item-has-children').click(function(event) {
 $(this).children(".sub-menu").slideToggle();

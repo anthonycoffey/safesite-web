@@ -6,7 +6,47 @@
     border-bottom: 2px solid $dark-gray;
   }
   .front-hero {
-  
+    background:rgba(247, 74, 41, 1);
+    #intro {
+      color: white;
+      top: 150px;
+      position: absolute;
+      height: 100%;
+      @include grid-column(4);
+      @include grid-column-offset(4);
+      button{
+        margin:0 20px 0 0 !important;
+        background: $blue;
+        padding:20px;
+        border-radius: 15px 0px 15px 0px;
+        -moz-border-radius: 15px 0px 15px 0px;
+        -webkit-border-radius: 15px 0px 15px 0px;
+        float: left !important;
+        @include grid-column(10);
+        @include grid-column-offset(1);
+        text-transform: uppercase;
+        @include breakpoint(medium) {
+          @include grid-column(5);
+        }
+      }
+
+    }
+    img {
+      top: 150px;
+      padding: 0 !important;
+      position: absolute;
+      @include grid-column(4);
+      @include grid-column-offset(8);
+
+    }
+    .overlay{
+      height: 100%;
+      width: 100%;
+      display: block;
+      opacity: 0.6;
+      display: block;
+      mix-blend-mode: lighten;    
+    }
     @include breakpoint(small) {
       height: 222px;
       background-size: cover;
@@ -33,14 +73,6 @@
     h1 {
       color: #fff;
       font-weight: 500;
-
-      @include breakpoint(small) {
-        font-size: 2.2rem;
-      }
-
-      @include breakpoint(medium) {
-        font-size: 2.875rem;
-      }
     }
 
     h4 {
@@ -58,10 +90,20 @@
       -moz-border-radius: 0px 0px 0px 30px;
       -webkit-border-radius: 0px 0px 0px 30px;
       border: 0px solid #000000;
-      img {
+
+
+      img, span{
+        &:nth-child(3){
+          border-left: solid grey 2px;
+          border-right: solid grey 2px;
+        }
+        &:nth-child(4){
+          border-right: solid grey 2px;
+        }
+        text-transform: uppercase;
         margin-top:8.9%;
-        @include grid-column(3);
-        opacity: 0.25;
+        @include grid-column(2);
+        opacity: 0.6;
         height: 19px;
 
       }
@@ -73,11 +115,18 @@
       }
 
       @include breakpoint(medium) {
-        @include grid-column(6);
-        img {
-          margin-top:3.9%;
+        @include grid-column(11);
+         margin-top: -131px;
+        span{
+
+          margin-top:2.5%;
           @include grid-column(3);
-          opacity: 0.25;
+        }
+        img {
+          margin-top:2.5%;
+          float: left !important;
+          @include grid-column(2);
+       
           height: 30px;
         }
 
@@ -141,7 +190,7 @@
         }
       }
       .orbit-container {
-       
+        
         height: auto !important;
         hr {
           border-bottom: 1.5px solid white;
@@ -298,8 +347,8 @@
   }
 
   .tab-wrap {
-   width:100%;
-  border: 1px solid #E6E7E8;
+    width:100%;
+    border: 1px solid #E6E7E8;
    .tabs{
     border-left: none;
     border-right: none;
@@ -523,254 +572,158 @@
     }
   }
 
-  .industries {
-    position: relative;
-    height: 853px;
-    margin-top: -110px;
+  .declan {
+    content: 'shit';
+    color: brown;
 
+  }
+
+  .industries {
+    margin-top: -90px;
+    width: 100%;
+    display: block;
+    position: relative;
+    float: left;
     .tractor{
-      @include grid-column(12); 
-      height: 400px;
-      background: url('../images/demo/traktor.jpg') bottom center; 
-      background-size: cover;
-      -webkit-background-size: cover;
-      -moz-background-size: cover; 
-      -o-background-size: cover;
+      display: inline-block;
+      width: 50%;
+      background: $blue;
+      padding-right:  calc(50% - 33.333333rem);
+      padding-bottom: 50%;
+      height: 0px;
       position: relative;
-      padding: 0;
       margin-left:auto !important;//Whatever u want to overwrite
       margin-right:auto !important;
       left: 0;
       bottom: 0;
       z-index: -3;
     }
+    .overlay{
+      position: absolute;
+      background: url('../images/demo/traktor.jpg') bottom center; 
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover; 
+      -o-background-size: cover;
+      height: 100%;
+      width: 100%;
+      display: block;
+      opacity: 0.6;
+      display: block;
+      mix-blend-mode: multiply;    
+    }
     .intro {
-      z-index: -1;
-      @include grid-column(12); 
-      padding-left: 30px !important;
+      max-width: 50%;
+      @include grid-column(6); 
+      padding-left:  calc(50% - 33.3333333rem)!important;
       height: 442.577px;
       position: relative;
-      float: right;
-      background-color: $light-gray;
-      padding-top: 200px;
+      padding-top: 50px;
       padding-bottom: 70px;
 
       hr{
         color: $dark-gray;
       }
       h1{
-        color: $orange;
+        color: $blue;
       }
-      h4 {
+      h2{
+        color: $orange;
         font-family: 'AvertaStdPE-Semibold';
       }
     }
-    .orbit {
-        margin-bottom: 70px;
-        position: relative;
-        @include grid-column(12); 
-        height: 410px;
-        bottom: 0;
-        right: 0;
-        padding-right: 0 !important;
-        padding-left: 0 !important;
-        .orbit-wrapper{
-          height: 410px;
-          background: rgba(247, 73, 38, 0.85);
-          .links {
-            @include grid-column(12); 
-            padding:0 !important;
-            background: white;
-            float: right;
-            bottom: 0;
-            height: 314px;
-            ul{
-              list-style: none;
-              padding-top: 20px;
-              li{
-                @include grid-column(12); 
-                a {
-                  color: $dark-gray;
-                }
-              }
+    .links-title{
+        li {
+          display: none;
+          &.active {
+            display: block;
+            a{
+              color: red;
             }
           }
         }
-        .orbit-container {
-          @include grid-column(12); 
-          height: 410px;
-          color: white;
-          float: left;
-          height: 100%;
-         
-        }
-        .orbit-bullets {
-          @include grid-column(12); 
-          padding-top: 25px;
-          float: left;
-          margin: 0;
-          background: white;
-          float: right;
-          height: 96px;
-          border-bottom: 1px solid $medium-gray;
-          border-left: 1px solid $medium-gray;
-          button {
-            text-align: left;
-            background: none;
-            padding-left: 15px;  
-            color: $dark-gray;   
-            font-family: 'AvertaStdPE-Semibold'; 
-          }
-          span {
-            font-size: rem-calc(32);
-          }
-        }
-
-
-    }
-    .orbit-controls {
-      width: 95px;
-      height: 95px;
-      background: white;
-      position: absolute;
-      bottom: 41px;
-      right: 0;
-
-      z-index: 999;
-      .orbit-next{
-        width: 95px;
-        height: 95px;
-        background: transparent;
       }
-    }
-    .orbit-bullets button {
-      display: none;
-      width: 200px!important;
-      height: 50px!important;
-      border-radius: 0%!important;
-      &.is-active {
-        display: block;
-      }
-    }
-    @include breakpoint(medium) { 
-      .intro {
-        z-index: -1;
-        @include grid-column(4); 
-        padding-left: 30px !important;
-        height: 442.577px;
+      .links, .links-title {
         position: relative;
-        float: right;
-        background-color: $light-gray;
-        padding-top: 200px;
-        padding-bottom: 70px;
+        width: 100%;
+        padding-left:  calc(50% - 33.333333rem);
+        display: inline-block;
+        ul {
+        }
 
-        hr{
-          color: $dark-gray;
-        }
-        h1{
-          color: $orange;
-        }
-        h4 {
-          font-family: 'AvertaStdPE-Semibold';
-        }
-        .orbit-controls {
-          right: 50%;
+      }
+      .links-title {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-top: solid 1px $dark-gray;
+        a {
+
         }
       }
-      .tractor {
-        @include grid-column(8); 
-        padding-top: 100px;
-        height: 853px;
-        background: url('../images/demo/traktor.jpg') bottom center; 
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover; 
-        -o-background-size: cover;
-        position: absolute;
-        padding: 0;
-        margin-left:auto !important;//Whatever u want to overwrite
-        margin-right:auto !important;
-        left: 0;
-        bottom: 0;
-        z-index: -3;
-      }
-      .orbit {
-        margin-bottom: 70px;
-        position: absolute;
-        @include grid-column(8); 
-        height: 410px;
-        bottom: 0;
-        right: 0;
-        padding-right: 0 !important;
-        padding-left: 0 !important;
-        .orbit-wrapper{
-          height: 410px;
-          background: rgba(247, 73, 38, 0.85);
-          .links {
-            @include grid-column(6); 
-            padding:0 !important;
-            background: white;
-            float: right;
-            bottom: 0;
-            height: 314px;
-            ul{
-              list-style: none;
-              padding-top: 20px;
-              li{
-                @include grid-column(6); 
-                a {
-                  color: $dark-gray;
-                }
-              }
-            }
-          }
-        }
-        .orbit-container {
+      .links {
+        background: $light-gray;
+        ul li {
+
           @include grid-column(6); 
-          height: 410px;
-          color: white;
-          float: left;
-          height: 100%;
-         
-        }
-        .orbit-bullets {
-          @include grid-column(6); 
-          padding-top: 25px;
-          float: left;
-          margin: 0;
-          background: white;
-          float: right;
-          height: 96px;
-          border-bottom: 1px solid $medium-gray;
-          border-left: 1px solid $medium-gray;
-          button {
-            text-align: left;
-            background: none;
-            padding-left: 15px;  
-            color: $dark-gray;   
-            font-family: 'AvertaStdPE-Semibold'; 
-          }
-          span {
-            font-size: rem-calc(32);
+          @include grid-column-collapse;
+          padding-left: 0;
+          a {
+            @include grid-column-collapse;
+            font-family: AvertaStdPE-Regular;
+            font-size: 18px;
+            color: $dark-gray;
           }
         }
-
-
-    }
-    .orbit-controls {
-      width: 95px;
-      height: 95px;
-      background: white;
-      position: absolute;
-      right: 50%;
-      z-index: 999;
-      .orbit-next{
-        width: 95px;
-        height: 95px;
-        background: transparent;
       }
-    }
-    }
+    
 
   }
+#recent {
+  @include grid-row(); 
+  h1 {
+    @include grid-column(4); 
+    border-right: solid 1px $dark-gray;
+  }
+  .posts{
+    @include grid-column(12); 
+    padding: 0 !important ;
+    div {
 
+      @include grid-column(3); 
+      span {
+        width: 100%;
+        padding-bottom: 75%;
+        display: inline-block;
+        position: relative;
+        height: 0px;
+      }
+      a {
+        height: 40px;
+        width:  calc(100% - 40px);
+        font-family: 'AvertaStdPE-Semibold'; 
+        font-size: 20px;
+        color: $dark-gray; 
+        display: inline-block;
+        position: relative;
+        div {
+          margin-right: -40px;
+          top: 0;
+          right: 0;
+          float: right;
+          position: absolute;
+           color: $blue;
+          width: 40px; 
+          height: 40px;
+          border: solid 2px $blue;
+          border-radius: 10px 0px 10px 0px;
+          -moz-border-radius: 10px 0px 10px 0px;
+          -webkit-border-radius: 10px 0px 10px 0px;
+          padding:4px 4px;;
+          font-size: 30px;
+        }
+
+      }
+
+    } 
+  }
+}

@@ -18,28 +18,22 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2l_UydRv8G30MPHGgoGhwImBy_cr7mNg"></script>
 
 	</head>
-	<body <?php body_class(); ?> >
-
-	
-
-
+	<body <?php body_class(); ?>>
 	<header class="site-header" role="banner">
-
-
 		<nav class="site-navigation top-bar" role="navigation">
-			<div class="top-bar-left">
-				
+			<div class="top-bar-left">	
 				<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/safesite.svg" alt="Safesite"></a>
-			
+			</div>
+			<div class="top-bar-middle">
 				<?php foundationpress_top_bar_r(); ?>
-
-		
 			</div>
 			<div class="top-bar-right">
-
+				<?php
+			    wp_nav_menu( array( 
+			        'theme_location' => 'right_language' ) ); 
+			    ?>
 			</div>
 		</nav>
-
 	</header>
 </nav>
 <div class="menu-overlay">

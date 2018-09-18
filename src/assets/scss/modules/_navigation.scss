@@ -121,21 +121,32 @@
 }
 
 
-.desktop-menu,
+
 .site-navigation .top-bar-left {
   ul#menu-main {
-  width: 100%;
+    width: 100%;
     margin-left: 300px;
     position: absolute;
-}
-.is-dropdown-submenu {
-  display: none;
-}
-
-  width: 662px;
+  }
+  .is-dropdown-submenu {
+    display: none;
+  }
+  @include grid-column(4);
   @include show-for(medium);
 }
 
+.site-navigation .top-bar-middle {
+  @include grid-column(6);
+  @include show-for(medium);
+
+}
+.desktop-menu {
+  width: 100%;
+}
+.site-navigation .top-bar-right {
+  @include grid-column(2);
+  @include show-for(medium);
+}
 // Site title
 .site-desktop-title a {
   font-weight: bold;
