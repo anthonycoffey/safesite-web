@@ -31,16 +31,19 @@ if( $image ) {
 </header>
 
 
-<div class="logos">
+<section class="logos">
   <span>Our partners include</span>
   <img id="" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/logo-01.png" alt=" ">
   <img id="" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/logo-02.png" alt=" ">
+  <hr>
   <img id="" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/logo-03.png" alt=" ">
   <img id="" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/logo-04.png" alt=" ">
-</div>
+</section>
 
 
 <section class="industries">
+<div class="overlay"></div>
+<div class="row">
 <div class="intro">
   <h1>Industries</h1>
   <hr>
@@ -60,12 +63,16 @@ if( $image ) {
 
 </div>
 
-<div class="tractor">
-<div class="overlay"></div>
+<div class="image">
+  <div class="overlay"></div>
 </div>
+</div>
+
+
 </section>
 <section id="recent">
   <h1>Recent Articles</h1>
+  <h2>Industry-related news, insights and tips to keep you safe.</h2>
   <div class="posts">
 <?php 
 $args = array( 'posts_per_page' => '4' );
