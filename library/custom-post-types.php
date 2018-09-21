@@ -149,4 +149,133 @@ function create_topics_hierarchical_taxonomy() {
  
 }
 
+
+
+/* Safesite specific custom post types & taxonomy */
+
+if ( ! function_exists('add_careers_custom_post_type') ) {
+
+	// Register Custom Post Type
+	function add_careers_custom_post_type() {
+
+		$labels = array(
+			'name'                  => _x( 'Careers', 'Post Type General Name', 'text_domain' ),
+			'singular_name'         => _x( 'Career', 'Post Type Singular Name', 'text_domain' ),
+			'menu_name'             => __( 'Careers', 'text_domain' ),
+			'name_admin_bar'        => __( 'Careers', 'text_domain' ),
+			'archives'              => __( 'Careers', 'text_domain' ),
+			'attributes'            => __( 'Career Attributes', 'text_domain' ),
+			'parent_item_colon'     => __( 'Parent Career:', 'text_domain' ),
+			'all_items'             => __( 'All Careers', 'text_domain' ),
+			'add_new_item'          => __( 'Add New Career', 'text_domain' ),
+			'add_new'               => __( 'Add New Career', 'text_domain' ),
+			'new_item'              => __( 'New Career', 'text_domain' ),
+			'edit_item'             => __( 'Edit Career', 'text_domain' ),
+			'update_item'           => __( 'Update Career', 'text_domain' ),
+			'view_item'             => __( 'View Career', 'text_domain' ),
+			'view_items'            => __( 'View Careers', 'text_domain' ),
+			'search_items'          => __( 'Search Careers', 'text_domain' ),
+			'not_found'             => __( 'Not found', 'text_domain' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+			'featured_image'        => __( 'Featured Image', 'text_domain' ),
+			'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+			'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+			'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this Career', 'text_domain' ),
+			'items_list'            => __( 'Careers list', 'text_domain' ),
+			'items_list_navigation' => __( 'Careers list navigation', 'text_domain' ),
+			'filter_items_list'     => __( 'Filter Careers list', 'text_domain' ),
+		);
+		$rewrite = array(
+			'slug'                  => 'company/careers',
+			'with_front'            => true,
+			'pages'                 => true,
+			'feeds'                 => true,
+		);
+		$args = array(
+			'label'                 => __( 'Career', 'text_domain' ),
+			'description'           => __( 'Safesite Career Opportunities', 'text_domain' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'thumbnail' ),
+			'taxonomies'            => array( 'tag' ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'             => 'dashicons-megaphone',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'rewrite'               => $rewrite,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'careers', $args );
+
+	}
+	add_action( 'init', 'add_careers_custom_post_type', 0 );
+
+}
+
+
+if ( ! function_exists('add_careers_custom_taxonomy') ) {
+	// Register Custom Taxonomy
+	function add_careers_custom_taxonomy() {
+
+		$labels = array(
+			'name'                       => _x( 'Career Categories', 'Taxonomy General Name', 'text_domain' ),
+			'singular_name'              => _x( 'Career Category', 'Taxonomy Singular Name', 'text_domain' ),
+			'menu_name'                  => __( 'Career Categories', 'text_domain' ),
+			'all_items'                  => __( 'All Career Categories', 'text_domain' ),
+			'parent_item'                => __( 'Parent Career Category', 'text_domain' ),
+			'parent_item_colon'          => __( 'Parent Career Category:', 'text_domain' ),
+			'new_item_name'              => __( 'New Career Category Name', 'text_domain' ),
+			'add_new_item'               => __( 'Add New Career Category', 'text_domain' ),
+			'edit_item'                  => __( 'Edit Career Category', 'text_domain' ),
+			'update_item'                => __( 'Update Career Category', 'text_domain' ),
+			'view_item'                  => __( 'View Career Category', 'text_domain' ),
+			'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+			'add_or_remove_items'        => __( 'Add or remove Career Categories', 'text_domain' ),
+			'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+			'popular_items'              => __( 'Popular Items', 'text_domain' ),
+			'search_items'               => __( 'Search Career Categories', 'text_domain' ),
+			'not_found'                  => __( 'Not Found', 'text_domain' ),
+			'no_terms'                   => __( 'No Career Categories', 'text_domain' ),
+			'items_list'                 => __( 'Career Categories list', 'text_domain' ),
+			'items_list_navigation'      => __( 'Career Categories list navigation', 'text_domain' ),
+		);
+		$args   = array(
+			'labels'            => $labels,
+			'hierarchical'      => true,
+			'public'            => true,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'show_tagcloud'     => true,
+		);
+		register_taxonomy( 'career-category', array( 'careers' ), $args );
+
+	}
+
+	add_action( 'init', 'add_careers_custom_taxonomy', 0 );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>

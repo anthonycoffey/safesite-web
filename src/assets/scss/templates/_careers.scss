@@ -1,0 +1,341 @@
+.careers {
+  overflow: hidden;
+  .hero-section {
+    background: url('/wp-content/themes/FoundationPress/src/assets/images/demo/careers-bg.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .hero-hr { // small <hr> style line between <h1> and <h4> in hero section
+      border-bottom: 2px solid #FFF;
+      width: 40px;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .inner {
+      position: absolute;
+      left: 10%;
+      @media (max-width: 768px) { // small screen
+        bottom: 17%;
+      }
+      @media (min-width: 769px) { // medium and up
+        bottom: 5%;
+      }
+    }
+
+    h1 {
+      color: #FFF;
+      font-weight: 700;
+      font-family: $body-font-family;
+      line-height: 1.2;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+      font-size: 1.33rem;
+    }
+
+    h4 {
+      color: #FEFEFE;
+      font-weight: 500;
+      font-size: 2.875rem;
+      letter-spacing: -1px;
+      @include breakpoint(small) {
+        font-size: 2.375rem;
+      }
+    }
+
+    .perks-benefits {
+      position: absolute;
+      bottom: 0;
+      //right: 3.25%;  //width: 40%;  -- defined using media queries below, but these are desktop values
+      background: $light-gray;
+
+      a {
+        display: block;
+        padding: 24px 24px;
+        font-size: 1.5rem;
+      }
+
+      .hero-drilldown {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 75px;
+        border-left: 1.5px solid $medium-gray;
+        a {
+          line-height: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 2.5rem;
+          transform: translate(-50%, -50%);
+          color: $medium-gray;
+        }
+      }
+
+      .panel {
+        border-top: 1.5px solid $medium-gray;
+        position: absolute;
+        top: 81px;
+        z-index: 9999;
+        padding: 7% 5%;
+        margin-right: 0px;
+        @media (min-width: 1025px){
+          padding: 6% 5%;
+          margin-right: 75px!important;
+        }
+
+        background: $light-gray;
+        border-bottom-right-radius: 50px;
+        ul{
+          margin: 0;
+          padding: 0;
+          display: block;
+          @media (min-width: 1025px) {
+            height: 10vh;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+          }
+          li{
+            @media (max-width: 1024px) {
+              margin: 10px 0;
+            }
+            font-weight: bold;
+            list-style: none;
+            @media (min-width: 1025px) {
+              flex: 1 1 20%;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 768px) { // small screen
+        width: 90%;
+        right: 0;
+      }
+
+      @media (min-width: 769px) { // medium screens and up
+        width: 45%;
+        right: 3.5%;
+      }
+
+      @media (min-width: map_get($breakpoints, xlarge)) { // 1200px and up
+        width: 45%;
+      }
+
+    }
+
+    // responsive styling for hero section class
+    @include breakpoint(small) {
+      height: 536px;
+      text-align: left;
+      .orbit {
+        .orbit-bullets {
+          display: none;
+        }
+      }
+    }
+
+    @include breakpoint(medium) {
+      height: 600px;
+    }
+
+  }// end .hero-section
+
+  // main content area
+  main {
+    position: relative;
+    margin-bottom: 100px;
+    .our-story {
+      position: relative;
+      background: $light-blue;
+      padding: 50px 52.5% 50px 5%;
+      margin-left: 5%;
+      margin-bottom: 250px;
+      border-bottom-left-radius: 50px;
+      color:#fff;
+      overflow: visible;
+      text-align: justify;
+      @media (max-width: 768px){
+        padding-top: 420px;
+        padding-right: 5%;
+      }
+      h3{
+        font-family: $body-font-family;
+        font-weight:700;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+
+      .quote {
+
+        position: absolute;
+        background: $orange;
+        z-index: 9999;
+        right: 0;
+        bottom: -300px;
+        width: 48%;
+        //height: 500px;
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+          bottom: -25px;
+        }
+
+        @media (max-width: 768px){
+          position: inherit;
+          width: 102%;
+          //height: 420px;
+          bottom: -125px;
+          margin-left: 7%!important;
+          p.quote-copy {
+            padding: 20px 0!important;
+            span{
+              bottom: -60px!important;
+            }
+          }
+          img.quote-img {
+            width: 75%!important;
+            left: 12.5%;
+          }
+        }
+
+        p.quote-copy {
+          position: relative;
+          top:-100px;
+          border-top: 2px solid #fff;
+          padding: 40px 0px;
+          margin: 0 auto;
+          width: 80%;
+          line-height: 1.25;
+          font-weight: bold;
+          font-size: 22px;
+          text-align: left!important;
+          span {
+            position: absolute;
+            bottom: -25px;
+            left:0;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 100;
+          }
+        }
+        img.quote-img {
+          position: relative;
+          top: -100px;
+          width: 80%;
+          margin: 0 10%;
+        }
+        div.quote-icon {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          left: -51px;
+          top: -51px;
+          background: $blue;
+          border-top-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+          text-align: center;
+          img{
+            position: relative;
+            top: 10px;
+            width: 25px;
+            height: 25px;
+          }
+        }
+      } // .quote
+    } // .our-story
+  } // end main
+
+  .open-positions {
+    @include grid-row();
+    max-width: 74rem!important;
+    h3 {
+      position: relative;
+      top: -30px;
+      color: $orange;
+      font-size: 3rem;
+    }
+    h4.career-category {
+      font-family: 'AvertaStdPE-Semibold';;
+      margin: 3em 0 1em;
+      font-weight: 400;
+      font-size: .9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    ul.careers-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      @include breakpoint(large){
+        min-height: 290px;
+      }
+      li:nth-child(1){
+        border-top: 1.5px solid $medium-gray;
+      }
+    }
+    .career-drilldown {
+      position: relative;
+      line-height: 90px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      border-bottom: 1px solid $dark-gray;
+      a {
+        color: $dark-gray;
+        font-family: $body-font-family;
+        letter-spacing: -1px;
+        font-weight: 100!important;
+        &.icon-link {
+          position: absolute;
+          top: 0;
+          right: 2%;
+          height: 100%;
+          line-height: 90px;
+          font-size: 3vw;
+        }
+        &.text-link:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  } // .open-positions
+
+} // .careers
+
+
+/* single view template */
+.career {
+  article {
+    min-height: 1000px;
+   main {
+
+   }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* fix logo on medium / small screens -- REMOVE ON PRODUCTION*/
+@media (max-width: 1024px){
+  .top-bar .logo {
+    width: 120px;
+    margin-right:0;
+  }
+  .site-navigation .top-bar-left {
+    display: flex;
+  }
+}
