@@ -17,7 +17,7 @@ get_header(); ?>
 <div class="featured-articles">
 <div class="blue"> <img id="corner" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/blue-corner-blog.svg" alt=" "><h1>Safety Blog</h1></div>
 
-    <div class="orbit" role="region"  data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;" >
+    <div id="blog-hero" class="orbit" role="region"  data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;" >
 
 
             <ul class="orbit-container" >
@@ -36,7 +36,8 @@ foreach ( $icecakes as $post ) : setup_postdata( $post ); ?>
               <li class="orbit-slide" >
                 
 
-              	<div class="featured-hero" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'small' ); ?>, small], [<?php the_post_thumbnail_url( 'medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'large' ); ?>, large], [<?php the_post_thumbnail_url( 'xlarge' ); ?>, xlarge]">
+              	<div class="featured-hero lazyload" data-sizes="auto" 
+    role="banner" data-bgset="<?php the_post_thumbnail_url( 'small' ); ?> [--small] | <?php the_post_thumbnail_url( 'medium' ); ?> [--medium] |  <?php the_post_thumbnail_url( 'large' ); ?> [--large] |  <?php the_post_thumbnail_url( 'xlarge' ); ?> [--xlarge]">
 	</div>
 				<div class="orbit-caption" > <div><span>Featured Article</span><h3><?php the_title(); ?></h3><span class="slider-number"></span></div><?php 
 $categories = get_the_category();
@@ -64,36 +65,64 @@ if( $next_post ) {
 
 <?php endforeach; 
 wp_reset_postdata(); ?>
+</ul>
 <div class="post-nav">
 	<div>
 		<p>Next</p>
 		<p class="title-two"></p>
-		<button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+		<button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span><span class="icon-navigate_next"></span></button>
 	</div>
 </div>
-			</ul>
+		
 
 	</div>
 </div>
+<?php
+// Query random posts
+$the_query = new WP_Query( array(
+	'post_type'      => 'post',
+	'orderby'        => 'rand',
+	'posts_per_page' => 3,
+) ); ?>
+
+<?php
+// If we have posts lets show them
+if ( $the_query->have_posts() ) : ?>
+
+	<div id="top-five">
+		<h3><?php _e( 'Top 5 Posts', 'text_domain' ); ?></h3>
+		<ul>
+			<?php
+			// Loop through the posts
+			while ( $the_query->have_posts() ) : $the_query->the_post();  ?>
+				<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></li>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+		</ul>
+	</div>
+
+<?php endif; ?>
 <div class="main-grid">
 <div class="filters">
+	<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter" >
+		
+		<input id="clear" type="submit" name='all'  value="Recent">
+		<?php
+			if( $terms = get_terms( 'category', 'orderby=name' ) ) : // to make it simple I use default categories
+				echo '<select id="sel" name="categoryfilter"><option>Category</option>';
+				foreach ( $terms as $term ) :
+					echo '<option value="' . $term->term_id . '">' . $term->name . '</option>'; // ID of the category as the value of an option
+				endforeach;
+				echo '</select>';
+			endif;
+		?>
+		
+		<input type="hidden" name="action" value="myfilter">
+	</form>
 	<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="recent">
-	<button>Most Viewed</button>
-	<input type="hidden" name="action" value="recentfilter">
-</form>
-<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter" >
-	<?php
-		if( $terms = get_terms( 'category', 'orderby=name' ) ) : // to make it simple I use default categories
-			echo '<select id="sel" name="categoryfilter"><option>Category</option>';
-			foreach ( $terms as $term ) :
-				echo '<option value="' . $term->term_id . '">' . $term->name . '</option>'; // ID of the category as the value of an option
-			endforeach;
-			echo '</select>';
-		endif;
-	?>
-	
-	<input type="hidden" name="action" value="myfilter">
-</form>
+		<button>Most Viewed</button>
+		<input type="hidden" name="action" value="recentfilter">
+	</form>
 </div>
 
 
@@ -111,6 +140,7 @@ wp_reset_postdata(); ?>
 
 		<?php endif; // End have_posts() check. ?>	
 		<div></div>
+		</main>
 	<?php
 global $wp_query; // you can remove this line if everything works for you
  
@@ -118,7 +148,7 @@ global $wp_query; // you can remove this line if everything works for you
 if (  $wp_query->max_num_pages > 1 )
 	echo '<div class="misha_loadmore"><span>Load more articles</span></div>'; // you can use <a> as well
 ?>
-	</main>
+	
 
 </div>
 

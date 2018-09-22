@@ -82,7 +82,7 @@ $medium-gray: #B2B2AD;
 $dark-gray: #636466;
 $black: #2B2B2B;
 $white: #ffffff;
-$orange: #f74a2a;
+$orange: #f77029;
 $blue:#103a60;
 $light-blue: #3D8EC3;
 $body-background: $white;
@@ -135,7 +135,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'DINNextSlabPro-Bold';
+$header-font-family: 'AvertaStdPE-Semibold';
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -144,19 +144,19 @@ $header-lineheight: 1.2;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
+    'h1': ('font-size': 50),
+    'h2': ('font-size': 28),
+    'h3': ('font-size': 20),
+    'h4': ('font-size': 16),
+    'h5': ('font-size': 16),
     'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
+    'h1': ('font-size': 50),
+    'h2': ('font-size': 28),
+    'h3': ('font-size': 20),
+    'h4': ('font-size': 16),
+    'h5': ('font-size': 16),
     'h6': ('font-size': 16),
   ),
 );
@@ -855,7 +855,7 @@ $topbar-background: $orange;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
-$topbar-unstack-breakpoint: medium;
+$topbar-unstack-breakpoint: small;
 
 // 56. Xy Grid
 // -----------
