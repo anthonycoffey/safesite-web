@@ -10,12 +10,12 @@
 ?>
 
 <div class="footer-container">
-	<div class="pre-footer">
+<!-- 	<div class="pre-footer">
 		<div class="info">
 			<p>Discover why Safesite is the world’s fastest growing </br>safety software via our free one-on-one product demo.</p>
 		</div>
 		<button class="button">Request a Demo</button>
-	</div>
+	</div> -->
 	<footer class="footer-nav">
 		<div class="icon-logo"><img id="" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/safesite-icon-01.svg" alt=" "></div>
 		<div class="contact">
@@ -34,13 +34,8 @@
 		</div>
 
 		<div class="footer-menu">
-
-    <?php
-    wp_nav_menu( array( 
-        'theme_location' => 'footer_menu', 
-        'container_class' => 'links' ) ); 
-    ?>
-
+			<h2>Discover why Safesite is the world’s fastest growing  safety software via our free one-on-one product demo.</h2>
+			  <button class="button">Request a Demo</button>
 		</div>
 	</footer>
 

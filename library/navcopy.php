@@ -83,8 +83,6 @@ if ( function_exists('register_sidebar') )
   )
 );
 
-add_post_type_support( 'page', 'excerpt' );
-
 function wpb_custom_new_menu() {
   register_nav_menu('my-custom-menu',__( 'Sub-menu' ));
 }
@@ -105,35 +103,30 @@ function mobile_menu() {
 }
 add_action( 'init', 'mobile_menu' );
 
-function right_language() {
-  register_nav_menu('right_language',__( 'Language and log-in' ));
-}
-add_action( 'init', 'right_language' );
-
-
 function misha_filter_function(){
 	$args = array(
 		'orderby' => 'date', // we will sort posts by date
 		'order'	=> $_POST['date'] // ASC или DESC
+		
 	);
  
-	// for taxonomies / categories
-	if( isset( $_POST['categoryfilter'] ) )
-		$args['tax_query'] = array(
-			array(
-				'taxonomy' => 'category',
-				'field' => 'id',
-				'terms' => $_POST['categoryfilter']
-			)
-		);
- 
-
+	if( empty( $_POST['all'] ) ) {
+	    if( isset( $_POST['categoryfilter'] ) )
+	            $args['tax_query'] = array(
+	                array(
+	                    'hide_empty' => 0,
+	                    'taxonomy' => 'category',
+	                    'field' => 'id',
+	                    'terms' => $_POST['categoryfilter'],
+	                )
+	            );
+	}
  
 	$query = new WP_Query( $args );
  
 	if( $query->have_posts() ) :
 		while( $query->have_posts() ): $query->the_post();
-			get_template_part( 'template-parts/content', '' );
+			get_template_part( 'template-parts/content', 'blog' );
 		endwhile;
 		wp_reset_postdata();
 	else :
@@ -169,7 +162,7 @@ function resource_filter_function(){
  
 	if( $query->have_posts() ) :
 		while( $query->have_posts() ): $query->the_post();
-			get_template_part( 'template-parts/content', '' );
+			get_template_part( 'template-parts/content', 'blog' );
 		endwhile;
 		wp_reset_postdata();
 	else :
@@ -197,7 +190,7 @@ function recent_filter_function(){
  
 	if( $query->have_posts() ) :
 		while( $query->have_posts() ): $query->the_post();
-			get_template_part( 'template-parts/content', '' );
+			get_template_part( 'template-parts/content', 'blog' );
 		endwhile;
 		wp_reset_postdata();
 	else :
@@ -359,7 +352,7 @@ function my_ajax_pagination() {
 	if( $name == "all" ) {
 		$args = array(
 	        'post_type' => 'resources',
-	        'posts_per_page' => -1
+	        'posts_per_page' => 8
 	    );
 	        $posts = new WP_Query( $args );
 
@@ -375,7 +368,7 @@ function my_ajax_pagination() {
 	}else {
 		$args = array(
 	        'post_type' => 'resources',
-	        'posts_per_page' => -1,
+	        'posts_per_page' => -8,
 	        'tax_query' => array(
 	            array(
 	                'taxonomy' => 'resource-type',
