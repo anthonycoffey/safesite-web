@@ -202,12 +202,13 @@
 			width: 100%;
 			h4 {
 				display: inline-block;
-				height: 60px;
+				line-height: 60px;
 				font-size: 18px;
 				color: white;
 				font-family: 'AvertaStdPE-Regular';
 				position: absolute;
-				margin-top: 20px;
+				//margin-top: 20px;
+        margin: 0;
 			}
 			.icon:before {
 			  color: white;
