@@ -9,3 +9,5 @@ config.yml
 *.swp
 packaged/
 wpcs/
+package.json
+package-lock.json
