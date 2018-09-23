@@ -11,3 +11,5 @@ packaged/
 wpcs/
 package.json
 package-lock.json
+
+dist/assets/css/app\.css
