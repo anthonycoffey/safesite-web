@@ -1,3 +1,5 @@
+/* careers archive template styling */
+
 .careers {
   overflow: hidden;
   .hero-section {
@@ -174,14 +176,12 @@
       }
 
       .quote {
-
         position: absolute;
         background: $orange;
         z-index: 9999;
         right: 0;
         bottom: -300px;
         width: 48%;
-        //height: 500px;
 
         @media (min-width: 769px) and (max-width: 1024px) {
           bottom: -25px;
@@ -321,6 +321,7 @@
   background-color: #f77029!important;
 }
 
+// used to extend .button classes below
 .apply-now {
   background: $light-blue;
   text-transform: uppercase;
@@ -331,6 +332,7 @@
   -webkit-border-radius: 20px 0px 20px 0px;
 }
 
+// single career template styling
 .career {
   article {
     min-height: 1000px;
@@ -378,12 +380,22 @@
           font-size: 1.5rem;
         }
 
-        ul.list {
+        ul {
           margin-bottom: 2em;
+          li {
+            margin-bottom: .75em;
+          }
+        }
+
+        p {
+          margin: 1em 0 2em 0;
         }
 
         .button {
           @extend .apply-now;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
           padding-left: 60px;
           padding-right: 60px;
         }
@@ -440,13 +452,6 @@
 
   } // end article
 } // end .career
-
-
-
-
-
-
-
 
 
 

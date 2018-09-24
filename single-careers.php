@@ -40,7 +40,7 @@ get_header(); ?>
               <div class="columns small-12 medium-8 content">
 
                 <h2>Role Deliverables</h2>
-                <ul class="list">
+                <ul>
                   <li>Partner with our Account Executives to help fill their pipeline via research, cold calling and qualifying leads</li>
                   <li>Prepare activity and forecast reports</li>
                   <li>Track all activity, update leads and opportunities and manage reports</li>
@@ -50,7 +50,7 @@ get_header(); ?>
                 </ul>
 
                 <h2>About You</h2>
-                <ul class="list">
+                <ul>
                   <li>Partner with our Account Executives to help fill their pipeline via research, cold calling and qualifying leads</li>
                   <li>Prepare activity and forecast reports</li>
                   <li>Track all activity, update leads and opportunities and manage reports</li>
@@ -58,6 +58,7 @@ get_header(); ?>
                   <li>Keep up-to-date knowledge of the industry</li>
                   <li>Ad hoc projects depending on needs of sales team</li>
                 </ul>
+                <p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.</p>
                 <a class="button">Apply Now</a>
               </div>
               <div class="columns small-12 medium-4 sidebar">

@@ -14,6 +14,29 @@
  * @since FoundationPress 1.0.0
  */
 
+
+/* Create Options pages for Theme fields and options */
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title' 	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Careers Template Settings',
+		'menu_title' 	=> 'Careers Settings',
+		'menu_slug' 	=> 'careers-settings',
+	));
+
+}
+
+// fix for ACF PRO version 5.20
+	add_filter('admin_footer', function(){
+		echo '<script type="text/javascript">jQuery("#screen-options-wrap .metabox-prefs").prepend("<input type=\'checkbox\' style=\'display: none;\'>");</script>';
+});
+
 /** Various clean up functions */
 require_once( 'library/cleanup.php' );
 
