@@ -12,8 +12,10 @@ get_header(); ?>
             -moz-background-size: cover; 
             -o-background-size: cover;"></span>
             <span id="intro">
-            <h1> <?php echo get_the_excerpt();?></h1>
-            <?php the_content(); ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+              <h1><?php echo get_the_excerpt();?></h1>
+              <?php the_content(); ?>
+            <?php endwhile; // end of the loop. ?>   
             <button class="button">Request a Demo</button>
             </span> 
                       <?php 
