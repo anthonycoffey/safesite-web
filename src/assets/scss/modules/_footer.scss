@@ -90,6 +90,12 @@
     #nav_menu-2{
       width: 100%;
     }
+    button {
+      text-transform: uppercase;
+      border-radius: 15px 0px 15px 0px;
+      -moz-border-radius: 15px 0px 15px 0px;
+      -webkit-border-radius: 15px 0px 15px 0px;
+    }
     width: 100%;
     display: block;
     float: left;  

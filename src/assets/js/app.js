@@ -26,11 +26,11 @@ $(".resources.menu-item, #nav_menu-4").hover(function () {
 
 $(".links-title ul li:first").addClass("active");
 
-var toggleSlide = function(){
-	$(".links-title ul li.active").removeClass('active')
-	.next().add(".links-title ul li:first").last().addClass("active");
-}
-setInterval(toggleSlide, 5000);
+// var toggleSlide = function(){
+// 	$(".links-title ul li.active").removeClass('active')
+// 	.next().add(".links-title ul li:first").last().addClass("active");
+// }
+// setInterval(toggleSlide, 5000);
 
 $('#menu-mobile .menu-item-has-children').click(function(event) {
 $(this).children(".sub-menu").slideToggle();

@@ -52,15 +52,17 @@ if( $image ) {
   <h2>See how Safesite is transforming safety managment in your industry.</h2>
 
 
-      <?php
+    <?php
     wp_nav_menu( array( 
         'theme_location' => 'my-custom-menu', 
-        'container_class' => 'links-title' ) ); 
+        'container_class' => 'links-title',
+        'link_before' => '<h2>', 
+        'link_after' => '</h2><div  class="icon-navigate_next"></div>' ) ); 
     ?>
         <?php
     wp_nav_menu( array( 
         'theme_location' => 'my-custom-menu', 
-        'container_class' => 'links' ) ); 
+        'container_class' => 'links'   ) ); 
     ?>
 
 </div>
