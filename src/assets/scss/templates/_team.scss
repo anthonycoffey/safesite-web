@@ -36,7 +36,7 @@
     }
 
     .highlighted-employee {
-      position: relative;
+      position: relative; 
       margin-bottom: 2rem;
       overflow: hidden;
       @include grid-column(9);
