@@ -5,395 +5,397 @@
     margin-left: 0;
     border-bottom: 2px solid $dark-gray;
   }
-  .front-hero {
-    position: relative;
-    background:$orange;
-    width: 100%;
-    display: block;
-    float: left;
-    padding-bottom: 5rem;
-    #intro {
-      color: white;
-      margin-top: 70px;
-      height: 100%;
+  body.page-template-front{
+    .front-hero {
       position: relative;
-      @include grid-column(12);
-      @include breakpoint(medium) { 
-        margin-top: 150px;
-        @include grid-column(4);
-        @include grid-column-offset(4);    
-      }
-
-      button{
-        margin:0 20px 0 0 !important;
-        background: $blue;
-        padding:20px;
-        border-radius: 15px 0px 15px 0px;
-        -moz-border-radius: 15px 0px 15px 0px;
-        -webkit-border-radius: 15px 0px 15px 0px;
-        float: left !important;
-        @include grid-column(8);
-        text-transform: uppercase;
-        @include breakpoint(medium) {
-          @include grid-column(5);
-        }
-      }
-
-    }
-    img {
-      position: relative;
-      margin-top: 150px;
-      padding: 0 !important;
-      @include grid-column(12);
-      @include breakpoint(medium) { 
-        @include grid-column(4);
-      }
-    }
-    .overlay{
-      position: absolute;
-      height: 100%;
+      background:$orange;
       width: 100%;
       display: block;
-      opacity: 0.6;
-      display: block;
-      mix-blend-mode: hard-light;    
-    }
-
-    h1 {
-      color: #fff;
-      font-weight: 500;
-    }
-
-    h4 {
-      color: #fefefe;
-      font-weight: 300;
-      font-size: 1.3125rem;
-    }
-  }
-
-
-  .logos{
-      margin-top: 0px;
-      z-index: 99;
-      background: #e6e7e8;
-      position: relative;
-      border-radius: 0px 0px 0px 20px;
-      -moz-border-radius: 0px 0px 0px 20px;
-      -webkit-border-radius: 0px 0px 0px 20px;
-      border: 0px solid #000000;
-      padding: 1.5rem !important;
-      @include breakpoint(medium) { 
-        margin-top: -40px;
-        padding: 0rem !important;
-      }
-      hr {
-        width: calc(100% );
-     
-        border:none;
-        border-bottom: solid grey 1px;
-        @include breakpoint(medium) {
-          display: none;
-        }
-      }
-      img{
-        &:nth-child(2){
-          border-right: solid grey 2px;
-          margin-bottom: 20px;
-        }
-        &:nth-child(3){
-
-          margin-bottom: 20px;
-        }
-        &:nth-child(5){
-          border-right: solid grey 2px;
-        }
-
-        opacity: 0.6;
-        @include grid-column(6);
-
-      }
-      span{
-        text-transform: uppercase;
+      float: left;
+      padding-bottom: 5rem;
+      #intro {
+        color: white;
+        margin-top: 70px;
+        height: 100%;
+        position: relative;
         @include grid-column(12);
-        padding-left: 0px;
-        padding-bottom: 20px;
-      }
-      @include breakpoint(small) {
-        @include grid-column(11);
-        @include grid-column-offset(1);
-      
-      }
-
-      @include breakpoint(medium) {
-        @include grid-column(11);
-
-        span{
-          margin-top:2.5%;
-          @include grid-column(2);
+        @include breakpoint(medium) { 
+          margin-top: 150px;
+          @include grid-column(4);
+          @include grid-column-offset(4);    
         }
-        img {
 
-          margin: 2.5% 0;
+        button{
+          margin:0 20px 0 0 !important;
+          background: $blue;
+          padding:20px;
+          border-radius: 15px 0px 15px 0px;
+          -moz-border-radius: 15px 0px 15px 0px;
+          -webkit-border-radius: 15px 0px 15px 0px;
           float: left !important;
-          @include grid-column(1 of 5);
-          padding-left: 3rem !important;
-          padding-right: 3rem !important;
-          &:nth-child(5){
-            border-left: solid grey 2px;
+          @include grid-column(8);
+          text-transform: uppercase;
+          @include breakpoint(medium) {
+            @include grid-column(5);
           }
         }
-        h2 {
-          font-weight: 300;
-          margin-bottom: 1.5rem;
-        }
 
-        h4 {
-          font-size: 1.125rem;
-          line-height: 1.6;
-          color: #777;
-          margin-bottom: 2rem;
+      }
+      img {
+        position: relative;
+        margin-top: 150px;
+        padding: 0 !important;
+        @include grid-column(12);
+        @include breakpoint(medium) { 
+          @include grid-column(4);
         }
       }
-    }
-
-  .industries {
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    @include breakpoint(medium) {
-      margin-top: -90px;
-    }
-    .row {
-      @include grid-row();
-
-    }
-    .overlay{
-      width: 50%;
-      position: absolute;
-      background: url('../images/demo/traktor.jpg') bottom center; 
-      background-size: cover;
-      -webkit-background-size: cover;
-      -moz-background-size: cover; 
-      -o-background-size: cover;
-      height: 100%;
-      width: 50%;
-      right: 0;
-      opacity: 0.6;
-      mix-blend-mode: multiply;  
-      display: none;  
-      @include breakpoint(medium) {
+      .overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
         display: block;
+        opacity: 0.6;
+        display: block;
+        mix-blend-mode: hard-light;    
+      }
+
+      h1 {
+        color: #fff;
+        font-weight: 500;
+      }
+
+      h4 {
+        color: #fefefe;
+        font-weight: 300;
+        font-size: 1.3125rem;
       }
     }
-    .tractor{
+
+
+    .logos{
+        margin-top: 0px;
+        z-index: 99;
+        background: #e6e7e8;
+        position: relative;
+        border-radius: 0px 0px 0px 20px;
+        -moz-border-radius: 0px 0px 0px 20px;
+        -webkit-border-radius: 0px 0px 0px 20px;
+        border: 0px solid #000000;
+        padding: 1.5rem !important;
+        @include breakpoint(medium) { 
+          margin-top: -40px;
+          padding: 0rem !important;
+        }
+        hr {
+          width: calc(100% );
+       
+          border:none;
+          border-bottom: solid grey 1px;
+          @include breakpoint(medium) {
+            display: none;
+          }
+        }
+        img{
+          &:nth-child(2){
+            border-right: solid grey 2px;
+            margin-bottom: 20px;
+          }
+          &:nth-child(3){
+
+            margin-bottom: 20px;
+          }
+          &:nth-child(5){
+            border-right: solid grey 2px;
+          }
+
+          opacity: 0.6;
+          @include grid-column(6);
+
+        }
+        span{
+          text-transform: uppercase;
+          @include grid-column(12);
+          padding-left: 0px;
+          padding-bottom: 20px;
+        }
+        @include breakpoint(small) {
+          @include grid-column(11);
+          @include grid-column-offset(1);
+        
+        }
+
+        @include breakpoint(medium) {
+          @include grid-column(11);
+
+          span{
+            margin-top:2.5%;
+            @include grid-column(2);
+          }
+          img {
+
+            margin: 2.5% 0;
+            float: left !important;
+            @include grid-column(1 of 5);
+            padding-left: 3rem !important;
+            padding-right: 3rem !important;
+            &:nth-child(5){
+              border-left: solid grey 2px;
+            }
+          }
+          h2 {
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+          }
+
+          h4 {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: #777;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+    .industries {
+      width: 100%;
       display: inline-block;
-      width: 50%;
-      background: $blue;
-      padding-right:  calc(50% - 33.333333rem);
-      padding-bottom: 50%;
-      height: 0px;
       position: relative;
-      margin-left:auto !important;//Whatever u want to overwrite
-      margin-right:auto !important;
-      left: 0;
-      float: right;
-      bottom: 0;
-      z-index: -3;
-    }
-
-    .intro {
-      z-index: -1;
-      @include grid-column(12); 
       @include breakpoint(medium) {
-        @include grid-column(6); 
+        margin-top: -90px;
       }
-      position: relative;
-      padding-right: 0px !important;
-      padding-top: 2rem;
-      @include breakpoint(medium) { 
-        padding-top: 150px;
-      }
-      hr{
-        color: $dark-gray;
-      }
-      h1{
-        color: $orange;
-        @include breakpoint(medium) { 
-          color: $blue;
-        }
-      }
-      h2{
-        width: 80%;
-        padding-bottom: 70px;
+      .row {
+        @include grid-row();
 
-        @include breakpoint(medium) { 
-          color: $orange;
-        }
-        font-family: 'AvertaStdPE-Semibold';
       }
-    }
-    .links-title{
-        border-top: solid 1px $dark-gray;
-        &:after  {
-          content: '';
-          border-top: solid 1px $dark-gray;
-          z-index: -1;
+      .overlay{
+        width: 50%;
+        position: absolute;
+        background: url('../images/demo/traktor.jpg') bottom center; 
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover; 
+        -o-background-size: cover;
+        height: 100%;
+        width: 50%;
+        right: 0;
+        opacity: 0.6;
+        mix-blend-mode: multiply;  
+        display: none;  
+        @include breakpoint(medium) {
           display: block;
-          position: absolute;
-          height: 100%;
-          width: 50%;
-          left: -50%;
-          top: -1px;
-          float: left;
-        }  
-        ul li {
-          width: 100%;
-          display: none;
-          &.active {
-            display: inline-block;
-            a {
-              width:  100%;
-              padding:0px;
-              display: inline-block;
-              height: 98px;
-              h2, div{
-                display: inline-block;
-              }
-              h2 {
-                display: inline-block;
-                position: relative;
-                height: 100%;
-                float: left;
-                padding: 36px 0;
-                color: $dark-gray;
-                width:  calc(100% - 98px);
-                padding-bottom: 0;
-              }
-              div {
-                font-size: 50px;
-                padding: 25px;
-                border-left: solid 1px $dark-gray;
-                color: $light-blue;
-                display: inline-block;
-                width: 98px;
-                height: 98px;
-              }
-            }
-          }
         }
       }
-      .links, .links-title {
-
-        position: relative;
-        width: 100%;
-       float: left;
+      .tractor{
         display: inline-block;
-        ul {
-          li {
-            padding-left: 0px;
-            a{
-              padding-left: 0px;
+        width: 50%;
+        background: $blue;
+        padding-right:  calc(50% - 33.333333rem);
+        padding-bottom: 50%;
+        height: 0px;
+        position: relative;
+        margin-left:auto !important;//Whatever u want to overwrite
+        margin-right:auto !important;
+        left: 0;
+        float: right;
+        bottom: 0;
+        z-index: -3;
+      }
+
+      .intro {
+        z-index: -1;
+        @include grid-column(12); 
+        @include breakpoint(medium) {
+          @include grid-column(6); 
+        }
+        position: relative;
+        padding-right: 0px !important;
+        padding-top: 2rem;
+        @include breakpoint(medium) { 
+          padding-top: 150px;
+        }
+        hr{
+          color: $dark-gray;
+        }
+        h1{
+          color: $orange;
+          @include breakpoint(medium) { 
+            color: $blue;
+          }
+        }
+        h2{
+          width: 80%;
+          padding-bottom: 70px;
+
+          @include breakpoint(medium) { 
+            color: $orange;
+          }
+          font-family: 'AvertaStdPE-Semibold';
+        }
+      }
+      .links-title{
+          border-top: solid 1px $dark-gray;
+          &:after  {
+            content: '';
+            border-top: solid 1px $dark-gray;
+            z-index: -1;
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            left: -50%;
+            top: -1px;
+            float: left;
+          }  
+          ul li {
+            width: 100%;
+            display: none;
+            &.active {
+              display: inline-block;
+              a {
+                width:  100%;
+                padding:0px;
+                display: inline-block;
+                height: 98px;
+                h2, div{
+                  display: inline-block;
+                }
+                h2 {
+                  display: inline-block;
+                  position: relative;
+                  height: 100%;
+                  float: left;
+                  padding: 36px 0;
+                  color: $dark-gray;
+                  width:  calc(100% - 98px);
+                  padding-bottom: 0;
+                }
+                div {
+                  font-size: 50px;
+                  padding: 25px;
+                  border-left: solid 1px $dark-gray;
+                  color: $light-blue;
+                  display: inline-block;
+                  width: 98px;
+                  height: 98px;
+                }
+              }
             }
           }
         }
+        .links, .links-title {
 
-      }
-      .links {
-        background: $light-gray;
-        &:after  {
-          content: '';
-          z-index: -1;
-          display: block;
-          position: absolute;
-          height: 100%;
-          width: 50%;
-          left: -50%;
-          top: 0px;
+          position: relative;
+          width: 100%;
+         float: left;
+          display: inline-block;
+          ul {
+            li {
+              padding-left: 0px;
+              a{
+                padding-left: 0px;
+              }
+            }
+          }
+
+        }
+        .links {
           background: $light-gray;
-          float: left;
-        } 
-        ul li {
+          &:after  {
+            content: '';
+            z-index: -1;
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            left: -50%;
+            top: 0px;
+            background: $light-gray;
+            float: left;
+          } 
+          ul li {
 
-          @include grid-column(6); 
-          @include grid-column-collapse;
-          padding-left: 0 !important;
-          a {
+            @include grid-column(6); 
             @include grid-column-collapse;
-            font-family: AvertaStdPE-Regular;
-            font-size: 18px;
-            color: $dark-gray;
+            padding-left: 0 !important;
+            a {
+              @include grid-column-collapse;
+              font-family: AvertaStdPE-Regular;
+              font-size: 18px;
+              color: $dark-gray;
+            }
           }
         }
-      }
-    
+      
 
-  }
-#recent {
-  padding-top: 70px;
-  @include grid-row(); 
-  h1 {
-    color: $blue;
-    @include grid-column(12); 
-    margin-bottom: 20px;
-    @include breakpoint(medium) { 
+    }
+  #recent {
+    padding-top: 70px;
+    @include grid-row(); 
+    h1 {
       color: $blue;
-      @include grid-column(4); 
-      margin-bottom: 70px;
-    }
-    border-right: solid 1px $dark-gray;
+      @include grid-column(12); 
+      margin-bottom: 20px;
+      @include breakpoint(medium) { 
+        color: $blue;
+        @include grid-column(4); 
+        margin-bottom: 70px;
+      }
+      border-right: solid 1px $dark-gray;
 
-  }
-  h2 {
-    
-    @include grid-column(12); 
-    @include breakpoint(medium) { 
-      color: $orange;
-      @include grid-column(6); 
-      margin-bottom: 70px;
     }
-  }
-  .posts{
-    @include grid-column(12); 
-    padding: 0 !important ;
-    div {
+    h2 {
+      
       @include grid-column(12); 
       @include breakpoint(medium) { 
-        @include grid-column(3); 
+        color: $orange;
+        @include grid-column(6); 
+        margin-bottom: 70px;
       }
-      span {
-        width: 100%;
-        padding-bottom: 75%;
-        display: inline-block;
-        position: relative;
-        height: 0px;
-      }
-      a {
-        height: 40px;
-        width:  calc(100% - 40px);
-        font-family: 'AvertaStdPE-Semibold'; 
-        font-size: 20px;
-        color: $dark-gray; 
-        display: inline-block;
-        position: relative;
-        div {
-          margin-right: -40px;
-          top: 0;
-          right: 0;
-          float: right;
-          position: absolute;
-           color: $blue;
-          width: 40px; 
+    }
+    .posts{
+      @include grid-column(12); 
+      padding: 0 !important ;
+      div {
+        @include grid-column(12); 
+        @include breakpoint(medium) { 
+          @include grid-column(3); 
+        }
+        span {
+          width: 100%;
+          padding-bottom: 75%;
+          display: inline-block;
+          position: relative;
+          height: 0px;
+        }
+        a {
           height: 40px;
-          border: solid 2px $blue;
-          border-radius: 10px 0px 10px 0px;
-          -moz-border-radius: 10px 0px 10px 0px;
-          -webkit-border-radius: 10px 0px 10px 0px;
-          padding:4px 4px;;
-          font-size: 30px;
+          width:  calc(100% - 40px);
+          font-family: 'AvertaStdPE-Semibold'; 
+          font-size: 20px;
+          color: $dark-gray; 
+          display: inline-block;
+          position: relative;
+          div {
+            margin-right: -40px;
+            top: 0;
+            right: 0;
+            float: right;
+            position: absolute;
+             color: $blue;
+            width: 40px; 
+            height: 40px;
+            border: solid 2px $blue;
+            border-radius: 10px 0px 10px 0px;
+            -moz-border-radius: 10px 0px 10px 0px;
+            -webkit-border-radius: 10px 0px 10px 0px;
+            padding:4px 4px;;
+            font-size: 30px;
+          }
+
         }
 
-      }
-
-    } 
+      } 
+    }
   }
 }

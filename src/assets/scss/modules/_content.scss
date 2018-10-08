@@ -6,13 +6,26 @@ body.stop {
   padding-bottom: 120px;
 }
 
-body.page {
+body.page, body.post-type-archive {
   header.title {
+    @include grid-row();
     height: 260px;
-    background: $medium-gray;
+    background: white;
     .entry-title {
       padding-top: 102px;
-      @include xy-grid-container;
+      color: $blue;
+      display: inline-block;
+      float: left;
+      padding-right: 40px;
+    }
+    h2 {
+      padding-left: 40px;
+      margin-top: 102px;
+      display: inline-block;
+      top: 0;
+      float: left;
+      width: 50%;
+      border-left: solid 1px $dark-gray;
       color: $orange;
     }
   }

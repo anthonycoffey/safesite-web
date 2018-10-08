@@ -267,15 +267,131 @@ if ( ! function_exists('add_careers_custom_taxonomy') ) {
 
 
 
+/* Safesite specific custom post types & taxonomy */
+
+if ( ! function_exists('add_industries_custom_post_type') ) {
+
+	// Register Custom Post Type
+	function add_industries_custom_post_type() {
+
+		$labels = array(
+			'name'                  => _x( 'industries', 'Post Type General Name', 'text_domain' ),
+			'singular_name'         => _x( 'industry', 'Post Type Singular Name', 'text_domain' ),
+			'menu_name'             => __( 'industries', 'text_domain' ),
+			'name_admin_bar'        => __( 'industries', 'text_domain' ),
+			'archives'              => __( 'industries', 'text_domain' ),
+			'attributes'            => __( 'industry Attributes', 'text_domain' ),
+			'parent_item_colon'     => __( 'Parent industry:', 'text_domain' ),
+			'all_items'             => __( 'All industries', 'text_domain' ),
+			'add_new_item'          => __( 'Add New industry', 'text_domain' ),
+			'add_new'               => __( 'Add New industry', 'text_domain' ),
+			'new_item'              => __( 'New industry', 'text_domain' ),
+			'edit_item'             => __( 'Edit industry', 'text_domain' ),
+			'update_item'           => __( 'Update industry', 'text_domain' ),
+			'view_item'             => __( 'View industry', 'text_domain' ),
+			'view_items'            => __( 'View industries', 'text_domain' ),
+			'search_items'          => __( 'Search industries', 'text_domain' ),
+			'not_found'             => __( 'Not found', 'text_domain' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+			'featured_image'        => __( 'Featured Image', 'text_domain' ),
+			'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+			'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+			'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this industry', 'text_domain' ),
+			'items_list'            => __( 'industries list', 'text_domain' ),
+			'items_list_navigation' => __( 'industries list navigation', 'text_domain' ),
+			'filter_items_list'     => __( 'Filter industries list', 'text_domain' ),
+		);
+		$args = array(
+			'label'                 => __( 'industries', 'text_domain' ),
+			'description'           => __( 'Safesite Industries', 'text_domain' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'thumbnail' ),
+			'taxonomies'            => array( 'tag' ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'             => 'dashicons-building',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'industries', $args );
+
+	}
+	add_action( 'init', 'add_industries_custom_post_type', 0 );
+
+}
 
 
 
+/* Safesite specific custom post types & taxonomy */
 
+if ( ! function_exists('add_partners_custom_post_type') ) {
 
+	// Register Custom Post Type
+	function add_partners_custom_post_type() {
 
+		$labels = array(
+			'name'                  => _x( 'partners', 'Post Type General Name', 'text_domain' ),
+			'singular_name'         => _x( 'partner', 'Post Type Singular Name', 'text_domain' ),
+			'menu_name'             => __( 'partners', 'text_domain' ),
+			'name_admin_bar'        => __( 'partners', 'text_domain' ),
+			'archives'              => __( 'partners', 'text_domain' ),
+			'attributes'            => __( 'partner Attributes', 'text_domain' ),
+			'parent_item_colon'     => __( 'Parent partner:', 'text_domain' ),
+			'all_items'             => __( 'All partners', 'text_domain' ),
+			'add_new_item'          => __( 'Add New partner', 'text_domain' ),
+			'add_new'               => __( 'Add New partner', 'text_domain' ),
+			'new_item'              => __( 'New partner', 'text_domain' ),
+			'edit_item'             => __( 'Edit partner', 'text_domain' ),
+			'update_item'           => __( 'Update partner', 'text_domain' ),
+			'view_item'             => __( 'View partner', 'text_domain' ),
+			'view_items'            => __( 'View partners', 'text_domain' ),
+			'search_items'          => __( 'Search partners', 'text_domain' ),
+			'not_found'             => __( 'Not found', 'text_domain' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+			'featured_image'        => __( 'Featured Image', 'text_domain' ),
+			'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+			'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+			'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this partner', 'text_domain' ),
+			'items_list'            => __( 'partners list', 'text_domain' ),
+			'items_list_navigation' => __( 'partners list navigation', 'text_domain' ),
+			'filter_items_list'     => __( 'Filter partners list', 'text_domain' ),
+		);
+		$args = array(
+			'label'                 => __( 'partner', 'text_domain' ),
+			'description'           => __( 'Safesite partners', 'text_domain' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'thumbnail' ),
+			'taxonomies'            => array( 'tag' ),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'             => 'dashicons-building',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'partners', $args );
 
+	}
+	add_action( 'init', 'add_partners_custom_post_type', 0 );
 
-
+}
 
 
 
