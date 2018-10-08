@@ -1,0 +1,72 @@
+body.post-type-archive-industries {
+	.main-content {
+		background: $light-gray;
+		.industries {
+			@include grid-row(); 
+			.group-one,.group-two,.group-three,.quote,.number {
+				margin-top: 70px;
+			}
+			.group-one {
+				@include grid-column(6); 
+				box-sizing: border-box;
+				position: relative;
+				padding-bottom: 20%;
+				height: 0px;
+				article {
+					@include grid-column(6); 
+				}
+			}
+			.group-two {
+				@include grid-column(12); 
+				padding-bottom: 20%;
+				height: 0px;
+				article {
+					@include grid-column(3); 
+				}
+			}
+			.group-three {
+				@include grid-column(6); 
+				padding-bottom: 50%;
+				height: 0px;
+				article {
+					@include grid-column(6); 
+					height: 90%;
+				}
+
+			}
+			article {
+				position: relative;
+				float: left;
+				height: 400px;
+				height: 100%;
+				.featured-hero {
+					padding-bottom: 65%;
+					height: 0px;
+				}
+			}
+			.quote {
+				background: $light-blue;
+				@include grid-column(6); 
+				position: relative;
+				float: left;
+				height: 0px;
+				padding-bottom: 20%;
+				border-radius: 15px 0px 15px 0px;
+				-moz-border-radius: 15px 0px 15px 0px;
+				-webkit-border-radius: 15px 0px 15px 0px;
+			}
+			.number {
+				height: 0px;
+				padding-bottom: 50%;
+				background: $blue;
+				@include grid-column(6); 
+				position: relative;
+				float: left;
+				height: 0px;
+				border-radius: 50px 0px 50px 0px;
+				-moz-border-radius: 50px 0px 50px 0px;
+				-webkit-border-radius: 50px 0px 50px 0px;
+			}
+		}
+	}
+}
