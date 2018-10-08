@@ -212,7 +212,7 @@
 
         // medium down
         @media (max-width: (map_get($breakpoints,medium)-1px) ) {
-          @include flex-grid-size(12)
+          @include flex-grid-size(12) 
         }
 
         // medium - large
