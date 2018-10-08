@@ -84,6 +84,7 @@ $black: #2B2B2B;
 $white: #ffffff;
 $orange: rgb(249,74,40);
 $blue:#103a60;
+//$navy: #0f3960;
 $light-blue: #3D8EC3;
 $body-background: $white;
 $body-font-color: $dark-gray;
@@ -134,7 +135,7 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-
+$header-font-family-slab: DINNextSlabPro-Bold;
 $header-font-family: 'AvertaStdPE-Semibold';
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
