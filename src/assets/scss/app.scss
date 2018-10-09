@@ -172,6 +172,21 @@ h1 {
   font-family: DINNextSlabPro-Bold;
 }
 
+h4 {
+  text-transform: uppercase;
+}
+
+.button {
+  font-family: "AvertaStdPE-Semibold";
+  text-transform: uppercase;
+  border-top-left-radius: 1em 1em;
+  border-bottom-right-radius: 1em 1em;
+  padding-top: 17px;
+  padding-left: 25px;
+  padding-right: 25px;
+  
+}
+
 .icon-google-plus:before {
   content: "\ea8b";
 }

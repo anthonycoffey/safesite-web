@@ -72,8 +72,8 @@
     padding: 0;
   }
   .icon-logo {
-     @include grid-column(1);
-      @include show-for(medium);
+    @include grid-column(1);
+    @include show-for(medium);
   }
   .contact {
     @include breakpoint(medium) {
@@ -90,7 +90,11 @@
     #nav_menu-2{
       width: 100%;
     }
+    h2 {
+      color: $light-gray;
+    }
     button {
+      margin-top: 20px;
       text-transform: uppercase;
       border-radius: 15px 0px 15px 0px;
       -moz-border-radius: 15px 0px 15px 0px;

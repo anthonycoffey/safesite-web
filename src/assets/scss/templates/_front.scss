@@ -5,7 +5,7 @@
     margin-left: 0;
     border-bottom: 2px solid $dark-gray;
   }
-  body.page-template-front{
+body.page-template-front{
     .front-hero {
       position: relative;
       background:$orange;
@@ -26,18 +26,10 @@
         }
 
         button{
-          margin:0 20px 0 0 !important;
           background: $blue;
-          padding:20px;
-          border-radius: 15px 0px 15px 0px;
-          -moz-border-radius: 15px 0px 15px 0px;
-          -webkit-border-radius: 15px 0px 15px 0px;
           float: left !important;
           @include grid-column(8);
           text-transform: uppercase;
-          @include breakpoint(medium) {
-            @include grid-column(5);
-          }
         }
 
       }
@@ -52,6 +44,7 @@
       }
       .overlay{
         position: absolute;
+
         height: 100%;
         width: 100%;
         display: block;
@@ -71,8 +64,6 @@
         font-size: 1.3125rem;
       }
     }
-
-
     .logos{
         margin-top: 0px;
         z-index: 99;
@@ -156,7 +147,6 @@
           }
         }
       }
-
     .industries {
       width: 100%;
       display: inline-block;
@@ -179,14 +169,24 @@
         height: 100%;
         width: 50%;
         right: 0;
-        opacity: 0.6;
-        mix-blend-mode: multiply;  
+        z-index: -99;
         display: none;  
         @include breakpoint(medium) {
           display: block;
         }
+        &:after  {
+          background: #103a60;
+          mix-blend-mode: multiply;  
+          content: '';
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0px;
+          float: left;
+        }
       }
-      .tractor{
+      .tractor {
         display: inline-block;
         width: 50%;
         background: $blue;
@@ -232,8 +232,7 @@
           }
           font-family: 'AvertaStdPE-Semibold';
         }
-      }
-      .links-title{
+        .links-title {
           border-top: solid 1px $dark-gray;
           &:after  {
             content: '';
@@ -284,10 +283,9 @@
           }
         }
         .links, .links-title {
-
           position: relative;
           width: 100%;
-         float: left;
+          float: left;
           display: inline-block;
           ul {
             li {
@@ -297,10 +295,11 @@
               }
             }
           }
-
         }
         .links {
           background: $light-gray;
+          padding-top: 40px;
+          padding-bottom: 40px;
           &:after  {
             content: '';
             z-index: -1;
@@ -326,9 +325,102 @@
             }
           }
         }
-      
+      } // intro
+      .quick-numbers {
+        padding-top: 40px;
+        position: relative;
+        @include grid-column(12); 
+        background: url('../images/demo/traktor.jpg') bottom center; 
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover; 
+        -o-background-size: cover;
+        &:after  {
+          z-index: 1;
+          background: #103a60;
+          mix-blend-mode: multiply;  
+          content: '';
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0px;
+          left: 0;
+          float: left;
+          @include breakpoint(medium) {
+            display: none;
+          } 
+        }
+        @include breakpoint(medium) { 
+          background: transparent;
+          @include grid-column(6);
+          padding-top: 0; 
+          margin-top: 150px;
+          padding-left: 40px !important;
+        }
+        img, h4, .button, div {
+          z-index: 2;
+          position: relative;
+        }
+        img {
+          -webkit-filter: invert(100%); /* Safari/Chrome */
+          filter: invert(100%);
+          margin-top:-10px;
+          width: 70%;
+          color: white;
+          @include breakpoint(medium) {
+            width: 40%;
+          } 
+        }
+        h4:first-child {
+          display: inline-block;
+          width: 100%;
+          color: white;
+          @include breakpoint(medium) {
+            width: 160px;
+          } 
+        }
+        .button {
+          margin-top: 20px;
+          margin-bottom: 40px;
+          background: transparent;
+          border: solid 1px white;
+        }
+        div {
+          display: block;
+          position: relative;
+          float: left;
+          width: 100%;
+          border-bottom: solid 1px white;
+          margin-top:20px;
+          margin-bottom:20px;      
+          h3 {
+            @include grid-column(9);
+            padding-top: 5px;
+            @include breakpoint(medium) {
+              padding-top: 17px;
+            }
+            color: white;
+            display: inline-block;
 
-    }
+          }
+          h1 {
+            @include grid-column(3);
+            @include grid-column-collapse;
+            padding-left: 0 !important;
+            margin-top:0px;
+            margin-bottom:30px;
+            color: white;
+            display: inline-block;
+            float: left;
+            &:after {
+              content:"%";
+            }
+          }
+        }
+      }
+    } // industries
+
   #recent {
     padding-top: 70px;
     @include grid-row(); 
@@ -345,7 +437,6 @@
 
     }
     h2 {
-      
       @include grid-column(12); 
       @include breakpoint(medium) { 
         color: $orange;
@@ -353,7 +444,7 @@
         margin-bottom: 70px;
       }
     }
-    .posts{
+    .posts {
       @include grid-column(12); 
       padding: 0 !important ;
       div {
@@ -392,9 +483,7 @@
             padding:4px 4px;;
             font-size: 30px;
           }
-
         }
-
       } 
     }
   }

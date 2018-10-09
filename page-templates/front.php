@@ -44,35 +44,40 @@ if( $image ) {
 
 
 <section class="industries">
-<div class="overlay"></div>
-<div class="row">
-<div class="intro">
-  <h1>Industries</h1>
-  <hr>
-  <h2>See how Safesite is transforming safety managment in your industry.</h2>
+  <div class="overlay">
+  </div>
+  <div class="row" data-equalizer>
+    <div class="intro" data-equalizer-watch>
+      <h1>Industries</h1>
+      <hr>
+      <h2>See how Safesite is transforming safety managment in your industry.</h2>
 
 
-    <?php
-    wp_nav_menu( array( 
-        'theme_location' => 'my-custom-menu', 
-        'container_class' => 'links-title',
-        'link_before' => '<h2>', 
-        'link_after' => '</h2><div  class="icon-navigate_next"></div>' ) ); 
-    ?>
         <?php
-    wp_nav_menu( array( 
-        'theme_location' => 'my-custom-menu', 
-        'container_class' => 'links'   ) ); 
-    ?>
+        wp_nav_menu( array( 
+            'theme_location' => 'my-custom-menu', 
+            'container_class' => 'links-title',
+            'link_before' => '<h2>', 
+            'link_after' => '</h2><div  class="icon-navigate_next"></div>' ) ); 
+        ?>
+            <?php
+        wp_nav_menu( array( 
+            'theme_location' => 'my-custom-menu', 
+            'container_class' => 'links'   ) ); 
+        ?>
 
-</div>
-
-<div class="image">
-  <div class="overlay"></div>
-</div>
-</div>
-
-
+    </div>
+    <?php 
+    $post_object = get_field('featured_case_study', false, false);
+    if($post_object) :
+        $post = $post_object;
+        // Overwrite $post
+        setup_postdata( $post ); ?>
+        <?php get_template_part( 'template-parts/quick-numbers', get_post_format() ); ?>
+        <?php
+        // Reset $post so the rest of the page works
+        wp_reset_postdata();
+    endif;?>
 </section>
 <section id="recent">
   <h1>Recent Articles</h1>

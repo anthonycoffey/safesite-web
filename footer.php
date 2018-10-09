@@ -17,11 +17,7 @@
 		<button class="button">Request a Demo</button>
 	</div> -->
 	<footer class="footer-nav">
-		<div class="icon-logo"><img id="" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/safesite-icon-01.svg" alt=" "></div>
-		<div class="contact">
-			<p>Contact</p>
-			<p>+1 888-363-2831 
-			info@safesitehq.com <br class="break" /> 1370 Harrison Street, San Francisco, CA 94103</p>
+		<div class="icon-logo"><img id="" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/assets/images/demo/safesite-icon-01.svg" alt=" ">
 			<span class="icon-social-twitter">
 
 			</span>
@@ -31,6 +27,11 @@
 			<span class="icon-social-linkedin">
 
 			</span>
+		</div>
+		<div class="contact">
+			<p>Contact</p>
+			<p>+1 888-363-2831 
+			info@safesitehq.com <br class="break" /> 1370 Harrison Street, San Francisco, CA 94103</p>
 		</div>
 
 		<div class="footer-menu">

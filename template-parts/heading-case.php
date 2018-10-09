@@ -72,16 +72,4 @@
 			</div>			
 		</div>
 	</header>
-	<div class="quick-numbers">
-		<div>
-			<h4>It’s All In The Numbers</h4>
-		</div>
-		<div>
-			<span class="numbers"><?php the_field('numbers_one'); ?></span>
-			<span><?php the_field('numbers_info_one'); ?></span>
-		</div>
-		<div>
-			<span class="numbers"><?php the_field('numbers_two'); ?></span>
-			<span><?php the_field('numbers_info_two'); ?></span>
-		</div>		
-	</div>
+	<?php get_template_part( 'template-parts/quick-numbers', get_post_format() ); ?>
