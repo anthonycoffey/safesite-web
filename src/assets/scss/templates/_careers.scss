@@ -254,6 +254,14 @@
 
   .open-positions {
     @include grid-row();
+
+    .headline {
+      @include grid-column(12)
+    }
+    .body-left,.body-right {
+      @include grid-column(6)
+    }
+
     max-width: 74rem!important;
     h3 {
       position: relative;
@@ -317,7 +325,7 @@
 // override blue header color from single resource template
 .single-careers .top-bar,
 .single-careers .site-navigation,
-.single-careers .top-bar ul{
+.single-careers .top-bar ul {
   background-color: #f94a28!important;
 }
 
