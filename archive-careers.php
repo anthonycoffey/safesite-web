@@ -83,8 +83,8 @@
       </div>
     </div>
     <div class="open-positions">
-      <div class="columns medium-12"><h3>Open Positions</h3></div>
-      <div class="columns medium-6">
+      <div class="headline"><h3>Open Positions</h3></div>
+      <div class="body-left">
 	      <?php
 		      $args = ['post_type' => 'careers','tax_query' => [ ['taxonomy' => 'career-category','field' => 'slug','terms' => 'sales'] ]];
 		      $sales = get_posts($args);
@@ -122,7 +122,7 @@
 	        <?php endforeach; ?>
         </ul>
       </div>
-      <div class="columns medium-6">
+      <div class="body-right">
 	      <?php
 		      $args = ['post_type' => 'careers','tax_query' => [ ['taxonomy' => 'career-category','field' => 'slug','terms' => 'engineering'] ]];
 		      $engineering = get_posts($args);
@@ -166,5 +166,4 @@
 	</main>
 </div>
 <?php get_footer();
-
 
